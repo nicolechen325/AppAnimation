@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
         mBtnScroller.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ScrollerByActivity.class));
+                startActivity(new Intent(MainActivity.this, ScrollerActivity.class));
             }
         });
     }

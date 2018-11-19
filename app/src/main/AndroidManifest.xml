@@ -19,7 +19,7 @@
 
         <activity android:name=".activity.AnimPropertyActivity" />
 
-        <activity android:name=".activity.ScrollerByActivity" />
+        <activity android:name=".activity.ScrollerActivity" />
     </application>
 
     <!--适配全面屏幕-->

@@ -2,6 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,30 +35,48 @@
             android:text="reset" />
     </LinearLayout>
 
-    <!-- TextView内容滚动 -->
-    <TextView
-        android:id="@+id/tv_scroll_inside"
+    <com.pa.chen.animation.widget.ReBoundLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="#dddccc"
-        android:gravity="center_vertical"
-        android:text="textview_scroll_inside"
-        android:textSize="25sp" />
-    <!-- Layout内容滚动 -->
-    <LinearLayout
-        android:id="@+id/ll_scroll_inside_view"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="100dp">
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:background="#dddccc"
-            android:gravity="center"
-            android:text="abc"
-            android:textSize="25sp" />
+        android:layout_height="560dp"
+        android:background="#fffd0a"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#fffda0"
+            android:gravity="center"
+            android:text="改变父控件mScrollY
+           " />
+
+        <!-- TextView内容滚动 -->
+        <TextView
+            android:id="@+id/tv_scroll_inside"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#fffda0"
+            android:gravity="center_vertical"
+            android:text="textview_scroll_inside"
+            android:textSize="25sp" />
+        <!-- Layout内容滚动 -->
+        <LinearLayout
+            android:id="@+id/ll_scroll_inside_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#fffda0"
+                android:gravity="center"
+                android:text="abc"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+    </com.pa.chen.animation.widget.ReBoundLayout>
 
 
 </LinearLayout>
