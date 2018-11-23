@@ -1,7 +1,6 @@
 package com.pa.chen.animation.activity;
 
 import android.app.Activity;
-import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,7 +23,7 @@ public class AnimTweenActivity extends Activity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anim_tween);
+        setContentView(R.layout.act_tween_anim_sample);
         initView();
     }
 

@@ -16,10 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.AnimTweenActivity" />
-
         <activity android:name=".activity.AnimPropertyActivity" />
-
         <activity android:name=".activity.ScrollerActivity" />
+        <activity android:name=".explosion.ExplosionActivity" />
     </application>
 
     <!--适配全面屏幕-->

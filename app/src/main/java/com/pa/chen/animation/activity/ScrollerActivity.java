@@ -19,7 +19,7 @@ public class ScrollerActivity extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scroller);
+        setContentView(R.layout.act_scroller);
         initView();
     }
 

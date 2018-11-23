@@ -32,7 +32,7 @@ public class AnimPropertyActivity extends Activity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anim_property);
+        setContentView(R.layout.act_pro_anim_sample);
         mTvAnimWidget = (TextView) findViewById(R.id.id_ball);
         mTvLog = (TextView) findViewById(R.id.id_log);
         Button mBtnRotate = (Button) findViewById(R.id.btn_rotate);
