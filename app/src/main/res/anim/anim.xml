@@ -2,7 +2,6 @@
 <!-- 补间动画资源文件 配置匀速改变 -->
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:interpolator="@android:anim/linear_interpolator" >
-
     <!-- 缩放 -->
   <scale
         android:duration="6000"
@@ -17,7 +16,7 @@
     <alpha
         android:duration="6000"
         android:fromAlpha="1.0"
-        android:toAlpha="0.20" />
+        android:toAlpha="0.30" />
 
     <!-- 旋转 -->
     <rotate
@@ -25,6 +24,15 @@
         android:fromDegrees="0"
         android:pivotX="50%"
         android:pivotY="50%"
-        android:toDegrees="180" /> 
+        android:toDegrees="180" />
 
+    <!-- 平移 -->
+    <translate
+        android:duration="6000"
+        android:fromXDelta="0"
+        android:fromYDelta="0"
+        android:toXDelta="100%"
+        android:toYDelta="100%"/>
+    <!--android:toXDelta="100%"自身的100%
+    android:toYDelta="100%p父视图100%-->
 </set>

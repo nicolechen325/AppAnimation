@@ -151,12 +151,12 @@ public class ExplosionAnimator extends ValueAnimator {
             float f = 0f;
             float normalization = factor / END_VALUE;//根据运行比例，normalization(0-1)
             //运行比例在(0到0.14)和(0.6到1)时，设置透明 ，每个爆炸球的life和overflow不同，使他们的出现与消失不同时的效果。
-//            if (normalization < life || normalization > 1f - overflow) {//life(0到0.14)与overflow(0到0.4f) ，
-//                alpha = 0f;//life是运行比例的十分之一x随机数,overflow是0.4x随机数，
-//                return;
-//            }
-//            //这个阶段不设置透明，取出首尾，再计算比例
-//            normalization = (normalization - life) / (1f - life - overflow);
+            if (normalization < life || normalization > 1f - overflow) {//life(0到0.14)与overflow(0到0.4f) ，
+                alpha = 0f;//life是运行比例的十分之一x随机数,overflow是0.4x随机数，
+                return;
+            }
+            //这个阶段不设置透明，取出首尾，再计算比例
+            normalization = (normalization - life) / (1f - life - overflow);
             float f2 = normalization * END_VALUE;//(0-1.4)
             //在重计算的比例大于0.7时，后面的0.3比例开始让他逐渐变透明。使透明度有一个过度的阶段。
             if (normalization >= 0.7f) {
@@ -167,7 +167,7 @@ public class ExplosionAnimator extends ValueAnimator {
 
             //基础baseXx不变，圆心点x坐标，
             //增加的权重值范围是(0-底部位置的1.4倍)
-            //cx = baseCx + f;
+            cx = baseCx + f;
             cy = (float) (baseCy - this.neg * Math.pow(f, 2.0)) - f * mag;
             radius = V + (baseRadius - V) * f2;
         }

@@ -36,7 +36,7 @@ public class ExplosionActivity extends Activity {
                 @Override
                 public void onClick(View v) {
                     mExplosionField.explode(v);
-                    //v.setOnClickListener(null);
+                    v.setOnClickListener(null);
                 }
             });
         }

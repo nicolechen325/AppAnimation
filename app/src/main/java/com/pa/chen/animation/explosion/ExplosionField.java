@@ -87,7 +87,7 @@ public class ExplosionField extends View {
         r.offset(-location[0], -location[1]);//Rect(375, 773 - 705, 1103)转换成ContentView父视图root左上角为原点的区域坐标
         r.inset(-mExpandInset[0], -mExpandInset[1]);//Rect(287, 685 - 793, 1191)扩大一定区域
         int startDelay = 100;
-        //view.animate().setDuration(150).setStartDelay(startDelay).scaleX(0f).scaleY(0f).alpha(0f).start();//View缩放动画
+        view.animate().setDuration(150).setStartDelay(startDelay).scaleX(0f).scaleY(0f).alpha(0f).start();//View缩放动画
         explode(Utils.createBitmapFromView(view), r, startDelay, ExplosionAnimator.DEFAULT_DURATION);
     }
 
