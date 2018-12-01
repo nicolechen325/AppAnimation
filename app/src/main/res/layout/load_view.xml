@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.pa.chen.animation.loading.ShapeLoadingView
+        android:id="@+id/shape_loadingview"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="2dp" />
+
+    <ImageView
+        android:id="@+id/indication"
+        android:layout_width="23dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="112dp"
+        android:src="@drawable/shadow" />
+
+    <TextView
+        android:id="@+id/promptTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:minWidth="44dp"
+        android:textColor="#757575"
+        android:textSize="14sp"
+        android:text="加载状态"
+        android:visibility="visible" />
+
+</LinearLayout>
