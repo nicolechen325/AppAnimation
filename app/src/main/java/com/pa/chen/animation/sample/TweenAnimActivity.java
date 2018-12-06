@@ -1,4 +1,4 @@
-package com.pa.chen.animation.activity;
+package com.pa.chen.animation.sample;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,16 +7,15 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.pa.chen.animation.R;
+import com.pa.chen.animation.logger.LogTag;
 
 /*
-补间动画分析：只需要指定动画开始 动画结束关键帧 以及持续时间、动画变化的中间帧 由系统计算
-Interpolator接口控制动画变化的速度 包括匀速 加速减速 抛物线等
+补间动画
  */
-public class AnimTweenActivity extends Activity implements View.OnClickListener {
+public class TweenAnimActivity extends Activity implements View.OnClickListener {
     Button mBtnAnim;
     TextView mTextView;
     Animation mAnimation;
@@ -37,24 +36,24 @@ public class AnimTweenActivity extends Activity implements View.OnClickListener 
         mAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-                Log.d(TAG.TAG_1, "--onAnimationStart");
-                Log.d(TAG.TAG_1, mTextView.getMeasuredHeight() + "x" + mTextView.getHeight());
-                Log.d(TAG.TAG_1, mTextView.getX() + "x" + mTextView.getTranslationX());
+                Log.d(LogTag.TAG_1, "--onAnimationStart");
+                Log.d(LogTag.TAG_1, mTextView.getMeasuredHeight() + "x" + mTextView.getHeight());
+                Log.d(LogTag.TAG_1, mTextView.getX() + "x" + mTextView.getTranslationX());
                 //动画中X和translationX都未改变，都是0。
                 //宽高都未改变
             }
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                Log.d(TAG.TAG_1, "--onAnimationEnd");
-                Log.d(TAG.TAG_1, mTextView.getMeasuredHeight() + "x" + mTextView.getHeight());
-                Log.d(TAG.TAG_1, mTextView.getX() + "x" + mTextView.getTranslationX());
+                Log.d(LogTag.TAG_1, "--onAnimationEnd");
+                Log.d(LogTag.TAG_1, mTextView.getMeasuredHeight() + "x" + mTextView.getHeight());
+                Log.d(LogTag.TAG_1, mTextView.getX() + "x" + mTextView.getTranslationX());
                 //动画中，虽然缩小了，但是X和translationX都未改变，都是0。
             }
 
             @Override
             public void onAnimationRepeat(Animation animation) {
-                Log.d(TAG.TAG_1, "--onAnimationRepeat");
+                Log.d(LogTag.TAG_1, "--onAnimationRepeat");
             }
         });
     }

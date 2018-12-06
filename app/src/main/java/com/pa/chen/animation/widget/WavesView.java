@@ -49,7 +49,7 @@ public class WavesView extends View {
             //该动画的改变不利用Matrix，而是利用动画的时间频率去改变View内数组
             @Override
             protected void applyTransformation(float interpolatedTime, Transformation t) {
-                //  CLogUtils.d(TAG,"applyTransformation:"+waveCurWeight);///虽然动画视图一直运行，但是是父视图重绘,需要在本onDraw里invalidate才可以
+                //  CLogUtils.d(LogTag,"applyTransformation:"+waveCurWeight);///虽然动画视图一直运行，但是是父视图重绘,需要在本onDraw里invalidate才可以
                 //满足了5秒钟到顶
                 if (interpolatedTime != lastTiem) {
                     for (int i = 0; i < getWidth(); i++) {
@@ -104,7 +104,7 @@ public class WavesView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         drawTimes++;//经过测试5秒钟的动画绘制了306次，平均60毫秒绘制一次，但不同的手机在5秒绘制的次数不同,性能低的手机只有100多次
-        //CLogUtils.d(TAG, "onDraw!!=" + drawTimes);
+        //CLogUtils.d(LogTag, "onDraw!!=" + drawTimes);
         if (xOffSet > 0) {
             System.arraycopy(mYPositions, xOffSet, mDestYPositions, 0, mYPositions.length - xOffSet);
             System.arraycopy(mYPositions, 0, mDestYPositions, mYPositions.length - xOffSet, xOffSet);

@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-
 //点赞效果动画
 public class FlowLikeWidget extends RelativeLayout {
 
@@ -37,7 +36,7 @@ public class FlowLikeWidget extends RelativeLayout {
     private int mPicHeight; // 图片的高度
 
     private int mChildViewHeight; // 在 XML 布局文件中添加的子View的总高度
-
+    
     public FlowLikeWidget(Context context) {
         this(context, null);
     }

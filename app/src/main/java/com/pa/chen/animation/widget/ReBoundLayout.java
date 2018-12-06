@@ -49,7 +49,8 @@ public class ReBoundLayout extends LinearLayout {
                 int deltaY = mLastMotionY - y;//deltaY
                 Log.d(TAG, deltaY + "");
                 int disY = (int) (2 * (deltaY - 0.5) / 3);
-                beginScroll(0, disY);
+                //scrollBy(0, disY);
+                 beginScroll(0, disY);
                 mLastMotionY = y;
                 break;
             case MotionEvent.ACTION_UP:
@@ -60,6 +61,9 @@ public class ReBoundLayout extends LinearLayout {
     }
 
     protected void reset(int x, int y) {
+        //int dy = y - getScrollY();
+        //mScroller.startScroll(0, getScrollY(), 0, dy, 2000);
+       // invalidate();
         int dy = y - mScroller.getFinalY();
         beginScroll(0, dy);
     }

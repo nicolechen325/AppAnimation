@@ -1,4 +1,4 @@
-package com.pa.chen.animation.activity;
+package com.pa.chen.animation.sample;
 
 
 import android.app.Activity;
@@ -20,13 +20,12 @@ import com.nineoldandroids.animation.TypeEvaluator;
 import com.nineoldandroids.animation.ValueAnimator;
 import com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener;
 import com.pa.chen.animation.R;
+import com.pa.chen.animation.logger.LogTag;
 
 /*
- * ObjectAnimator 动画的执行类 ValueAnimator 动画的执行类 AnimatorSet
- * 用于控制一组动画的执行：线性，一起，每个动画的先后执行等。 AnimatorInflater 用户加载属性动画的xml文件 TypeEvaluator
- * 类型估值，主要用于设置动画操作属性的值。 TimeInterpolator 时间插值
+ * 属性动画
  */
-public class AnimPropertyActivity extends Activity implements View.OnClickListener {
+public class PropertyAnimActivity extends Activity implements View.OnClickListener {
     TextView mTvAnimWidget;
     TextView mTvLog;
     @Override
@@ -59,7 +58,7 @@ public class AnimPropertyActivity extends Activity implements View.OnClickListen
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 float cVal = animation.getAnimatedFraction();
-                Log.d(TAG.TAG_2, cVal + "");
+                Log.d(LogTag.TAG_2, cVal + "");
             }
         });
         anim.start();
@@ -136,7 +135,7 @@ public class AnimPropertyActivity extends Activity implements View.OnClickListen
         public PointF evaluate(float fraction, PointF startValue, PointF endValue) {
             //frac是0-1；
             fraction *= 3 ;//按照3秒运动时间计算
-            Log.d(TAG.TAG_2, fraction+ "");
+            Log.d(LogTag.TAG_2, fraction+ "");
             // x方向100px/s ，则y方向0.5 * 200 * t * t，水平初速度100，重力加速度200计算
             PointF resultPointF = new PointF();
             resultPointF.x = 100 * fraction ;

@@ -1,4 +1,4 @@
-package com.pa.chen.animation.activity;
+package com.pa.chen.animation.sample;
 
 import android.app.Activity;
 import android.os.Bundle;

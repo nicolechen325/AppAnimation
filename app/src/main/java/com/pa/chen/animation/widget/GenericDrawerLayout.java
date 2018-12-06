@@ -746,7 +746,7 @@ public class GenericDrawerLayout extends FrameLayout {
      * 自动打开抽屉
      */
     private void autoOpenDrawer() {
-        // CLogUtils.d(TAG, "autoOpenDrawer:"+mAnimStatus);
+        // CLogUtils.d(LogTag, "autoOpenDrawer:"+mAnimStatus);
         if (AnimStatus.CLOSING.equals(mAnimStatus)) {
             if (mAnimating.get()) {
                 mAnimating.set(false);
