@@ -7,5 +7,4 @@ package com.pa.chen.animation.logger;
 public class LogTag {
     public static final String TAG_1 = "TweenAnimActivity";
     public static final String TAG_2 = "PropertyAnimActivity";
-
 }

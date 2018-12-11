@@ -31,43 +31,6 @@ public class DispatcherActivity extends Activity {
         mBtnExplosion = (Button) findViewById(R.id.btn_explosion);
         mBtnShowLoading = (Button) findViewById(R.id.btn_showloading);
         mBtnContainer = (Button) findViewById(R.id.btn_container);
-
-//        mBtnProperty.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
-//        mBtnTween.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
-//        mBtnScroller.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
-//        mBtnExplosion.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(DispatcherActivity.this, ExplosionActivity.class));
-//            }
-//        });
-//        mBtnShowLoading.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(DispatcherActivity.this, LoadingActivity.class));
-//            }
-//        });
-//        mBtnContainer.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(DispatcherActivity.this, ));
-//            }
-//        });
     }
 
     public void btnPropertyAnim(View view) {

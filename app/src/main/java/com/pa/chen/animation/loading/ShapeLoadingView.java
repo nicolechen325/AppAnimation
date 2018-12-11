@@ -29,7 +29,6 @@ public class ShapeLoadingView extends View {
     private float mControlY = 0;
     private float mAnimPercent;
 
-
     //用赛贝尔曲线画圆
     private float mMagicNumber = 0.55228475f;
 
@@ -226,15 +225,12 @@ public class ShapeLoadingView extends View {
 
     public void changeShape() {
         mIsLoading = true;
-
-
         invalidate();
     }
 
     public enum Shape {
         SHAPE_TRIANGLE, SHAPE_RECT, SHAPE_CIRCLE
     }
-
 
     @Override
     public void setVisibility(int visibility) {

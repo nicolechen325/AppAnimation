@@ -28,6 +28,7 @@ import com.pa.chen.animation.logger.LogTag;
 public class PropertyAnimActivity extends Activity implements View.OnClickListener {
     TextView mTvAnimWidget;
     TextView mTvLog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,7 +98,6 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
         });
         anim.start();
     }
-
 
     //实现一个动画更改多个效果：使用propertyValuesHolder 注意 是一个动画 并不是多个动画的叠加
     //一个PropertyValuesHolder代表一个个属性 在一定时间的值的范围

@@ -179,16 +179,12 @@ public class LoadingView extends FrameLayout {
             }
         });
         animatorSet.start();
-
-
     }
-
 
     //下落
     public void freeFall() {
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(mShapeLoadingView, "translationY", 0, mDistance);
         ObjectAnimator scaleIndication = ObjectAnimator.ofFloat(mIndicationIm, "scaleX", 1, 0.2f);
-
 
         objectAnimator.setDuration(ANIMATION_DURATION);
         objectAnimator.setInterpolator(new AccelerateInterpolator(factor));
