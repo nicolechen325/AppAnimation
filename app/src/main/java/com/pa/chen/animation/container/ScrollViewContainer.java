@@ -14,90 +14,36 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
-/**
- * 包含两个ScrollView的容器
- * 更多详解见博客http://dwtedx.com
- *
- * @author chenjing
- *
- */
+//两个ScrollView
+//todo 待重构
 public class ScrollViewContainer extends RelativeLayout {
-	/**
-	 * 自动上滑
-	 */
+	//自动上滑
 	public static final int AUTO_UP = 0;
-	/**
-	 * 自动下滑
-	 */
+	//自动下滑
 	public static final int AUTO_DOWN = 1;
-	/**
-	 * 动画完成
-	 */
+	//动画完成
 	public static final int DONE = 2;
-	/**
-	 * 动画速度
-	 */
+	//动画速度
 	public static final float SPEED = 80f;
-
 	private boolean isMeasured = false;
-
-	/**
-	 * 用于计算手滑动的速度
-	 */
+	//用于计算手滑动的速度
 	private VelocityTracker vt;
-
 	private int mViewHeight;
 	private int mViewWidth;
-
 	private View topView;
 	private View bottomView;
-
 	private boolean canPullDown;
 	private boolean canPullUp;
 	private int state = DONE;
-
-	/**
-	 * 记录当前展示的是哪个view，0是topView，1是bottomView
-	 */
+	//记录当前展示的是哪个view，0是topView，1是bottomView
 	private int mCurrentViewIndex = 0;
-	/**
-	 * 手滑动距离，这个是控制布局的主要变量
-	 */
+	//手滑动距离，这个是控制布局的主要变量
 	private float mMoveLen;
 	private MyTimer mTimer;
 	private float mLastY;
-	/**
-	 * 用于控制是否变动布局的另一个条件，mEvents==0时布局可以拖拽了，mEvents==-1时可以舍弃将要到来的第一个move事件，
-	 * 这点是去除多点拖动剧变的关键
-	 */
+	//用于控制是否变动布局的另一个条件，mEvents==0时布局可以拖拽了，mEvents==-1时可以舍弃将要到来的第一个move事件，
+	//这点是去除多点拖动剧变的关键
 	private int mEvents;
-
-	private Handler handler = new Handler() {
-
-		@Override
-		public void handleMessage(Message msg) {
-			Log.d("ontouchev--",""+mMoveLen);
-			if (state == AUTO_UP) {
-				mMoveLen -= SPEED;
-				if (mMoveLen <= -mViewHeight) {
-					mMoveLen = -mViewHeight;
-					state = DONE;
-					mCurrentViewIndex = 1;
-				}
-			} else if (state == AUTO_DOWN) {
-				mMoveLen += SPEED;
-				if (mMoveLen >= 0) {
-					mMoveLen = 0;
-					state = DONE;
-					mCurrentViewIndex = 0;
-				}
-			} else {
-				mTimer.cancel();
-			}
-			requestLayout();
-		}
-
-	};
 
 	public ScrollViewContainer(Context context) {
 		super(context);
@@ -249,6 +195,7 @@ public class ScrollViewContainer extends RelativeLayout {
 			return false;
 		}
 	};
+
 	private OnTouchListener bottomViewTouchListener = new OnTouchListener() {
 
 		@Override
@@ -301,8 +248,36 @@ public class ScrollViewContainer extends RelativeLayout {
 					handler.obtainMessage().sendToTarget();
 				}
 			}
-
 		}
 	}
+
+	private Handler handler = new Handler() {
+
+		@Override
+		public void handleMessage(Message msg) {
+			Log.d("ontouchev--",""+mMoveLen);
+			if (state == AUTO_UP) {
+				mMoveLen -= SPEED;
+				if (mMoveLen <= -mViewHeight) {
+					mMoveLen = -mViewHeight;
+					state = DONE;
+					mCurrentViewIndex = 1;
+				}
+			} else if (state == AUTO_DOWN) {
+				mMoveLen += SPEED;
+				if (mMoveLen >= 0) {
+					mMoveLen = 0;
+					state = DONE;
+					mCurrentViewIndex = 0;
+				}
+			} else {
+				mTimer.cancel();
+			}
+			requestLayout();
+		}
+
+	};
+
+
 
 }

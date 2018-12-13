@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
+import com.pa.chen.animation.container.ContainerActivity;
 import com.pa.chen.animation.sample.ScrollerActivity;
 import com.pa.chen.animation.explosion.ExplosionActivity;
 import com.pa.chen.animation.loading.LoadingActivity;
@@ -14,6 +16,7 @@ import com.pa.chen.animation.sample.TweenAnimActivity;
 
 //动画主页面
 public class DispatcherActivity extends Activity {
+    FrameLayout frameLayout;
     Button mBtnProperty;
     Button mBtnTween;
     Button mBtnScroller;
@@ -52,7 +55,7 @@ public class DispatcherActivity extends Activity {
     }
 
     public void btnContainer(View view) {
-        startActivity(new Intent(DispatcherActivity.this, com.pa.chen.animation.container.MainActivity.class));
+        startActivity(new Intent(DispatcherActivity.this, ContainerActivity.class));
     }
 
 }

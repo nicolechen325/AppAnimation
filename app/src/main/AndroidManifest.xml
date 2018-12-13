@@ -22,8 +22,7 @@
 
         <activity android:name=".loading.LoadingActivity" />
 
-        <activity android:name=".container.FirstActivity" />
-        <activity android:name=".container.MainActivity" />
+        <activity android:name=".container.ContainerActivity" />
 
 
     </application>
