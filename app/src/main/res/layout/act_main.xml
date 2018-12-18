@@ -1,74 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:padding="20dp"
-       android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_anim_tween"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:onClick="btnTweenAnim"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:textColor="#949494"
-            android:text="补间动画示例" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-        <Button
-            android:id="@+id/btn_anim_property"
-            android:textColor="#949494"
+            <Button
+                android:id="@+id/btn_anim_tween"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="btnTweenAnim"
+                android:text="补间动画示例"
+                android:textColor="#949494" />
+
+            <Button
+                android:id="@+id/btn_anim_property"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="btnPropertyAnim"
+                android:text="属性动画示例"
+                android:textColor="#949494" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:onClick="btnPropertyAnim"
-            android:layout_marginTop="20dp"
-            android:text="属性动画示例" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-        <Button
-            android:id="@+id/btn_scroller"
-            android:textColor="#949494"
+            <Button
+                android:id="@+id/btn_scroller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="btnScroller"
+                android:text="Scroller弹性动画示例"
+                android:textColor="#949494" />
+
+            <Button
+                android:id="@+id/btn_explosion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="btnExplosion"
+                android:text="爆炸效果"
+                android:textColor="#949494" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:onClick="btnScroller"
-            android:layout_marginTop="20dp"
-            android:text="Scroller弹性动画示例" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-        <Button
-            android:id="@+id/btn_explosion"
-            android:textColor="#949494"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:onClick="btnExplosion"
-            android:layout_marginTop="20dp"
-            android:text="爆炸效果" />
+            <Button
+                android:id="@+id/btn_showloading"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="btnShowLoading"
+                android:text="加载效果"
+                android:textColor="#949494" />
 
-
-        <Button
-            android:id="@+id/btn_showloading"
-            android:textColor="#949494"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:onClick="btnShowLoading"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="加载效果" />
-
-
-        <Button
-            android:id="@+id/btn_container"
-            android:textColor="#949494"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:onClick="btnContainer"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="容器动画" />
+            <Button
+                android:id="@+id/btn_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="btnContainer"
+                android:text="容器动画"
+                android:textColor="#949494" />
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>
