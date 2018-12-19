@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.pa.chen.animation.container.ContainerActivity;
+import com.pa.chen.animation.dialog3d.Dialog3dAnim;
 import com.pa.chen.animation.sample.ScrollerActivity;
 import com.pa.chen.animation.explosion.ExplosionActivity;
 import com.pa.chen.animation.loading.LoadingActivity;
@@ -27,6 +27,8 @@ public class DispatcherActivity extends Activity {
     Button mBtnExplosion;
     Button mBtnShowLoading;
     Button mBtnContainer;
+    Button mBtn3dDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,11 +48,11 @@ public class DispatcherActivity extends Activity {
 
         mBtnProperty = (Button) findViewById(R.id.btn_anim_property);
         mBtnTween = (Button) findViewById(R.id.btn_anim_tween);
-        mBtnScroller= (Button) findViewById(R.id.btn_scroller);
+        mBtnScroller = (Button) findViewById(R.id.btn_scroller);
         mBtnExplosion = (Button) findViewById(R.id.btn_explosion);
         mBtnShowLoading = (Button) findViewById(R.id.btn_showloading);
         mBtnContainer = (Button) findViewById(R.id.btn_container);
-
+        mBtn3dDialog = (Button) findViewById(R.id.btn_3d_dialog);
     }
 
     public void btnPropertyAnim(View view) {
@@ -60,6 +62,7 @@ public class DispatcherActivity extends Activity {
     public void btnTweenAnim(View view) {
         startActivity(new Intent(DispatcherActivity.this, TweenAnimActivity.class));
     }
+
     public void btnScroller(View view) {
         startActivity(new Intent(DispatcherActivity.this, ScrollerActivity.class));
     }
@@ -67,12 +70,18 @@ public class DispatcherActivity extends Activity {
     public void btnExplosion(View view) {
         startActivity(new Intent(DispatcherActivity.this, ExplosionActivity.class));
     }
+
     public void btnShowLoading(View view) {
         startActivity(new Intent(DispatcherActivity.this, LoadingActivity.class));
     }
 
     public void btnContainer(View view) {
         startActivity(new Intent(DispatcherActivity.this, ContainerActivity.class));
+    }
+
+    public void btn3dDialog(View view) {
+        final Dialog3dAnim dialog = new Dialog3dAnim(this);
+        dialog.show();
     }
 
 }
