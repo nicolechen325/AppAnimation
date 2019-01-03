@@ -80,10 +80,10 @@ public class WavesView extends View {
         }
         waveMaxHeight = getHeight();
         //属性动画也可以实现
-//        anim = ObjectAnimator.ofFloat(this, "a", 0,
+//        tween_anim_sample = ObjectAnimator.ofFloat(this, "a", 0,
 //                getHeight()).setDuration(AppConfig.splashStartTime);
-//        anim.start();
-//        anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+//        tween_anim_sample.start();
+//        tween_anim_sample.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
 //            float lastVal = 0;
 //
 //            @Override

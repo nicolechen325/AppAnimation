@@ -2,21 +2,17 @@
     android:id="@+id/id_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="32dp"
     android:orientation="vertical">
-    <Button
+    <TextView
         android:id="@+id/btn_anim_begin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="缩放：以视图中点为中心缩放，x变为原来的0.2，y轴变为原来的0.4。\n
-        透明度：由1变为0.3。\n
-        旋转：中心为原点旋转180度。\n
-        平移：x和y分別平移自身大小的100%。" />
+        android:text="@string/tween_anim_desc" />
     <TextView
         android:id="@+id/tv_anim"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:background="#fffccc"
         android:gravity="center"
-        android:text="我是一个开心旋转并且缩小的视图啊，我在做动画，哈哈哈!!"/>
+        android:text="我是一个开心旋转、缩小的视图，哈哈哈!!"/>
 </LinearLayout>
