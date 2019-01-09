@@ -1,1 +1,3 @@
-include ':app', ':nine_anim'
+include ':app',
+        ':nine_anim',
+        ':jbox2dlibrary'

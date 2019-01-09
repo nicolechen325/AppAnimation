@@ -35,7 +35,7 @@
             android:text="reset" />
     </LinearLayout>
 
-    <com.pa.chen.animation.widget.ReBoundLayout
+    <com.set.anim.widget.ReBoundLayout
         android:layout_width="match_parent"
         android:layout_height="560dp"
         android:background="#fffd0a"
@@ -76,7 +76,7 @@
 
         </LinearLayout>
 
-    </com.pa.chen.animation.widget.ReBoundLayout>
+    </com.set.anim.widget.ReBoundLayout>
 
 
 </LinearLayout>

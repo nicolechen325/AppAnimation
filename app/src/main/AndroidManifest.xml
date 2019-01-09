@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OpenDoorActivity">
+        <activity android:name="com.set.anim.OpenDoorActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,14 +16,14 @@
             </intent-filter>
         </activity>
         <!--动画主页-->
-        <activity android:name=".DispatcherActivity"/>
+        <activity android:name="com.set.anim.DispatcherActivity"/>
         <!--各类动画Activity-->
-        <activity android:name=".sample.TweenAnimActivity" />
-        <activity android:name=".sample.PropertyAnimActivity" />
-        <activity android:name=".sample.ScrollerActivity" />
-        <activity android:name=".explosion.ExplosionActivity" />
-        <activity android:name=".loading.LoadingActivity" />
-        <activity android:name=".container.ContainerActivity" />
+        <activity android:name="com.set.anim.sample.TweenAnimActivity" />
+        <activity android:name="com.set.anim.sample.PropertyAnimActivity" />
+        <activity android:name="com.set.anim.sample.ScrollerActivity" />
+        <activity android:name="com.set.anim.explosion.ExplosionActivity" />
+        <activity android:name="com.set.anim.loading.LoadingActivity" />
+        <activity android:name="com.set.anim.container.ContainerActivity" />
 
 
     </application>

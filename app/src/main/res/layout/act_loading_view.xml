@@ -5,7 +5,7 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <com.pa.chen.animation.loading.LoadingView
+    <com.set.anim.loading.LoadingView
         android:id="@+id/loadView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
