@@ -44,19 +44,19 @@ public class ExplosionActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.explosion_menu, menu);
+//        getMenuInflater().inflate(R.menu.explosion_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_reset) {
-            View root = findViewById(R.id.root);
-            reset(root);
-            addListener(root);
-            mExplosionField.clear();
-            return true;
-        }
+//        if (item.getItemId() == R.id.action_reset) {
+//            View root = findViewById(R.id.root);
+//            reset(root);
+//            addListener(root);
+//            mExplosionField.clear();
+//            return true;
+//        }
         return super.onOptionsItemSelected(item);
     }
 

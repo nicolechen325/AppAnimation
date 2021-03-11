@@ -17,7 +17,7 @@ import android.view.View;
 import com.pa.chen.animation.R;
 import com.set.anim.dialog3d.Dialog3dAnim;
 
-import com.set.anim.jbox2dview.MobikeView;
+//import com.set.anim.jbox2dview.MobikeView;
 
 import com.set.anim.sample.ScrollerActivity;
 import com.set.anim.explosion.ExplosionActivity;
@@ -37,7 +37,7 @@ public class DispatcherActivity extends Activity {
     private SensorManager sensorManager;
     private Sensor defaultSensor;
 
-    private MobikeView mobikeView;
+//    private MobikeView mobikeView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class DispatcherActivity extends Activity {
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         defaultSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
-        mobikeView = (MobikeView) findViewById(R.id.mobike_view);
+//        mobikeView = (MobikeView) findViewById(R.id.mobike_view);
 
 
         final ImageProgressDialog prDialog = new ImageProgressDialog(DispatcherActivity.this,
@@ -92,13 +92,13 @@ public class DispatcherActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        mobikeView.getmMobike().onStart();
+//        mobikeView.getmMobike().onStart();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mobikeView.getmMobike().onStop();
+//        mobikeView.getmMobike().onStop();
     }
 
     @Override
@@ -121,7 +121,7 @@ public class DispatcherActivity extends Activity {
                 float x = event.values[0];
                 float y = event.values[1] * 2.0f;
                 Log.d("SensorEventListener", "x:" + x + ",y:" + y);
-                mobikeView.getmMobike().onSensorChanged(-x, y);
+//                mobikeView.getmMobike().onSensorChanged(-x, y);
             }
         }
 
@@ -134,7 +134,7 @@ public class DispatcherActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_bound) {
-            mobikeView.getmMobike().random();
+//            mobikeView.getmMobike().random();
         }
         return super.onOptionsItemSelected(item);
     }
