@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:background="#00f4f4"
                 android:paddingVertical="10dp"
-                android:text="X轴旋转"
+                android:text="Y轴旋转"
                 android:textColor="#353535" />
 
             <TextView
@@ -30,6 +30,26 @@
                 android:background="#00f4f4"
                 android:paddingVertical="10dp"
                 android:text="X轴平移"
+                android:textColor="#353535" />
+
+            <TextView
+                android:id="@+id/btn_alpha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00f4f4"
+                android:paddingVertical="10dp"
+                android:text="透明度"
+                android:textColor="#353535" />
+
+            <TextView
+                android:id="@+id/btn_scale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00f4f4"
+                android:paddingVertical="10dp"
+                android:text="Scale"
                 android:textColor="#353535" />
 
             <TextView
@@ -59,8 +79,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:paddingVertical="10dp"
                 android:background="#00f4f4"
+                android:paddingVertical="10dp"
                 android:text="viewAnim"
                 android:textColor="#353535" />
         </LinearLayout>
@@ -78,7 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="#f8f8f8"
+            android:background="#00f4f4"
             android:text="动画的控件！" />
 
         <TextView
