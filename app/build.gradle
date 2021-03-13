@@ -21,6 +21,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api 'com.android.support:appcompat-v7:26.1.0'
 
-    api project(':jbox2dlibrary')
+//    api project(':jbox2dlibrary')
 
 }

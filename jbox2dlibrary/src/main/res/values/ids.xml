@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="jbox2d_body_tag" type="id"/>
-    <item name="jbox2d_view_circle_tag" type="id"/>
-</resources>

@@ -9,6 +9,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,6 +21,7 @@ import com.set.anim.dialog3d.Dialog3dAnim;
 
 import com.set.anim.sample.FasterImageAnimActivity;
 import com.set.anim.sample.FrameAnimActivity;
+import com.set.anim.sample.OpenDoorActivity;
 import com.set.anim.sample.ScrollerActivity;
 import com.set.anim.explosion.ExplosionActivity;
 import com.set.anim.loading.LoadingActivity;
@@ -36,7 +38,7 @@ import com.set.animation.R;
 /**
  * 动画主页面
  */
-public class MainAnimActivity extends Activity {
+public class MainAnimActivity extends AppCompatActivity {
     private SensorManager sensorManager;
     private Sensor defaultSensor;
 

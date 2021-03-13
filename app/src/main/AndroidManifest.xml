@@ -25,7 +25,7 @@
         <activity android:name="com.set.anim.loading.LoadingActivity" />
         <activity android:name="com.set.anim.sample.FrameAnimActivity" />
         <activity android:name="com.set.anim.sample.FasterImageAnimActivity" />
-        <activity android:name="com.set.anim.OpenDoorActivity" />
+        <activity android:name="com.set.anim.sample.OpenDoorActivity" />
 
 
     </application>
