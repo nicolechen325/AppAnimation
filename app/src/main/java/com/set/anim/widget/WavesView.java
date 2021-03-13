@@ -1,5 +1,6 @@
 package com.set.anim.widget;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -10,9 +11,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 
-import com.nineoldandroids.animation.ObjectAnimator;
-
-//波浪效果动画
+/**
+ * 波浪效果动画
+ */
 public class WavesView extends View {
     private static final String TAG = "WavesView";
     private static final float STRECH_FACTOR_A = 20;

@@ -27,7 +27,9 @@ import android.view.animation.Interpolator;
 
 import java.util.Random;
 
-//属性动画,爆炸效果
+/**
+ * 爆炸效果,属性动画
+ */
 public class ExplosionAnimator extends ValueAnimator {
     static long DEFAULT_DURATION = 5000;
     private static final Interpolator DEFAULT_INTERPOLATOR = new AccelerateInterpolator(0.6f);
@@ -91,7 +93,7 @@ public class ExplosionAnimator extends ValueAnimator {
         particle.neg = (-particle.mag) / particle.bottom;
 
         //计算爆炸球初始圆心坐标，不考虑透明时爆炸球开始出现的圆心点，所有球都集中在一小块区域中
-        f = mBound.centerX()+ (Y * (random.nextFloat() - 0.5f));//XY的中心点+随机值，不要都挤成一坨
+        f = mBound.centerX() + (Y * (random.nextFloat() - 0.5f));//XY的中心点+随机值，不要都挤成一坨
         particle.baseCx = f;
         particle.cx = f;
         f = mBound.centerY() + (Y * (random.nextFloat() - 0.5f));

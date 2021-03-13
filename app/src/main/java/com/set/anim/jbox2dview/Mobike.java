@@ -5,7 +5,7 @@ import android.graphics.Canvas;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.pa.chen.animation.R;
+import com.set.animation.R;
 
 import org.jbox2d.collision.shapes.CircleShape;
 import org.jbox2d.collision.shapes.PolygonShape;

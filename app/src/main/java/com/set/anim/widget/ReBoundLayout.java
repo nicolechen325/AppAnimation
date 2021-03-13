@@ -7,7 +7,9 @@ import android.view.MotionEvent;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
 
-//回弹控件
+/**
+ * 回弹控件
+ */
 public class ReBoundLayout extends LinearLayout {
     private Scroller mScroller;
     private final String TAG = "ReBoundLayout";
@@ -50,7 +52,7 @@ public class ReBoundLayout extends LinearLayout {
                 Log.d(TAG, deltaY + "");
                 int disY = (int) (2 * (deltaY - 0.5) / 3);
                 //scrollBy(0, disY);
-                 beginScroll(0, disY);
+                beginScroll(0, disY);
                 mLastMotionY = y;
                 break;
             case MotionEvent.ACTION_UP:
@@ -63,7 +65,7 @@ public class ReBoundLayout extends LinearLayout {
     protected void reset(int x, int y) {
         //int dy = y - getScrollY();
         //mScroller.startScroll(0, getScrollY(), 0, dy, 2000);
-       // invalidate();
+        // invalidate();
         int dy = y - mScroller.getFinalY();
         beginScroll(0, dy);
     }

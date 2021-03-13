@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.pa.chen.animation.R;
+import com.set.animation.R;
 
 //ExplosionField是透明的，MATCH_PARENT覆盖在主视图上
 //Clickable

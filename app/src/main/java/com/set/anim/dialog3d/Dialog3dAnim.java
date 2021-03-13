@@ -13,8 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.LinearLayout;
 
-import com.pa.chen.animation.R;
-
+import com.set.animation.R;
 
 public class Dialog3dAnim extends Dialog implements View.OnClickListener{
     private Context context;

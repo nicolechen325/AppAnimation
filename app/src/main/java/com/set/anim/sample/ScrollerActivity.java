@@ -7,9 +7,11 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.pa.chen.animation.R;
+import com.set.animation.R;
 
-//执行scrollTo的View视图内容就会滚动，而不是他本很滚动。
+/**
+ * 执行scrollTo的View视图内容就会滚动，而不是他本很滚动。
+ */
 public class ScrollerActivity extends Activity implements View.OnClickListener{
     //TextView内容滚动
     TextView tvScrollInside;

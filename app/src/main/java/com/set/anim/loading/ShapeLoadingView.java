@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
-import com.pa.chen.animation.R;
+import com.set.animation.R;
 
 public class ShapeLoadingView extends View {
     private static final float genhao3 = 1.7320508075689f;

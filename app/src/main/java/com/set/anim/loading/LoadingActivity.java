@@ -4,7 +4,7 @@ package com.set.anim.loading;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.pa.chen.animation.R;
+import com.set.animation.R;
 
 public class LoadingActivity extends Activity {
 	@Override

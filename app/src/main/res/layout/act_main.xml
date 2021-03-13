@@ -81,16 +81,6 @@
                 android:text="加载效果"
                 android:textColor="#949494" />
 
-            <Button
-                android:id="@+id/btn_container"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:onClick="btnContainer"
-                android:text="容器动画"
-                android:textColor="#949494" />
-
         </LinearLayout>
 
 

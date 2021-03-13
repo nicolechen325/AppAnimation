@@ -1,18 +1,121 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/id_container"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:id="@+id/btn_anim_begin"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/id_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tween_anim_desc" />
-    <TextView
-        android:id="@+id/tv_anim"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="#fffccc"
-        android:gravity="center"
-        android:text="我是一个开心旋转、缩小的视图，哈哈哈!!"/>
-</LinearLayout>
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#cfcfcf"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_anim_scale"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="#cccaaa"
+                android:gravity="center"
+                android:text="缩放"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:background="#cfcfcf"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_anim_alpha"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="#cccaaa"
+                android:gravity="center"
+                android:text="透明度"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:background="#cfcfcf"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_anim_translate"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="#cccaaa"
+                android:gravity="center"
+                android:text="平移"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:background="#cfcfcf"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_anim_rotate"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="#cccaaa"
+                android:gravity="center"
+                android:text="旋转"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:background="#cfcfcf"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_anim_all"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="#cccaaa"
+                android:gravity="center"
+                android:text="All"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 补间动画资源文件 配置匀速改变 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/linear_interpolator">
+    <!-- 透明度 -->
+    <alpha
+        android:duration="2000"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.30" />
+</set>

@@ -5,11 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 
-import com.pa.chen.animation.R;
+import com.set.animation.R;
 import com.set.anim.widget.PullDoorView;
 
-
-//开门动画
+/**
+ * 开门动画
+ */
 public class OpenDoorActivity extends Activity implements PullDoorView.PullDoorCallBack {
 
     @Override
@@ -23,7 +24,7 @@ public class OpenDoorActivity extends Activity implements PullDoorView.PullDoorC
 
     @Override
     public void onPullDoorSuccess() {
-        startActivity(new Intent(OpenDoorActivity.this, DispatcherActivity.class));
+        startActivity(new Intent(OpenDoorActivity.this, MainAnimDispatcherActivity.class));
         finish();
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pa.chen.animation">
+    package="com.set.animation">
 
     <application
         android:allowBackup="true"
@@ -16,15 +16,13 @@
             </intent-filter>
         </activity>
         <!--动画主页-->
-        <activity android:name="com.set.anim.DispatcherActivity"/>
+        <activity android:name="com.set.anim.MainAnimDispatcherActivity"/>
         <!--各类动画Activity-->
         <activity android:name="com.set.anim.sample.TweenAnimActivity" />
         <activity android:name="com.set.anim.sample.PropertyAnimActivity" />
         <activity android:name="com.set.anim.sample.ScrollerActivity" />
         <activity android:name="com.set.anim.explosion.ExplosionActivity" />
         <activity android:name="com.set.anim.loading.LoadingActivity" />
-        <activity android:name="com.set.anim.container.ContainerActivity" />
-
 
     </application>
 

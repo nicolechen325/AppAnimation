@@ -1,6 +1,11 @@
 package com.set.anim.sample;
 
-
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
+import android.animation.TypeEvaluator;
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.graphics.PointF;
 import android.os.Bundle;
@@ -12,20 +17,14 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.AnimatorListenerAdapter;
-import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.animation.PropertyValuesHolder;
-import com.nineoldandroids.animation.TypeEvaluator;
-import com.nineoldandroids.animation.ValueAnimator;
-import com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener;
-import com.pa.chen.animation.R;
-import com.set.anim.logger.LogTag;
+import com.set.animation.R;
 
-/*
+/**
  * 属性动画
  */
 public class PropertyAnimActivity extends Activity implements View.OnClickListener {
+    public static final String TAG_2 = "PropertyAnimActivity";
+
     TextView mTvAnimWidget;
     TextView mTvLog;
 
@@ -51,15 +50,15 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
     public void rotateXAnim(final View view) {
         /*
          * 动画更新的时候不断调用setXxx更新属性,在setRotationX的时候如果没有重绘,
-		 * 在AnimatorUpdateListener里还需增加view.invalidate();
-		 * rotationX属性就是通过setRotationX在一定duration时间内不断给属性赋值 从0到180 */
+         * 在AnimatorUpdateListener里还需增加view.invalidate();
+         * rotationX属性就是通过setRotationX在一定duration时间内不断给属性赋值 从0到180 */
         ObjectAnimator anim = ObjectAnimator.ofFloat(view, "rotationX", 0.0F,
                 180.0F).setDuration(3000);
         anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 float cVal = animation.getAnimatedFraction();
-                Log.d(LogTag.TAG_2, cVal + "");
+                Log.d(TAG_2, cVal + "");
             }
         });
         anim.start();
@@ -82,7 +81,7 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 float mFra = animation.getAnimatedFraction();//运行比例
-                StringBuilder printLog=new StringBuilder();
+                StringBuilder printLog = new StringBuilder();
                 printLog.append(mFra);
                 printLog.append("\n");
                 printLog.append("::mLeft=");
@@ -134,17 +133,17 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
         @Override
         public PointF evaluate(float fraction, PointF startValue, PointF endValue) {
             //frac是0-1；
-            fraction *= 3 ;//按照3秒运动时间计算
-            Log.d(LogTag.TAG_2, fraction+ "");
+            fraction *= 3;//按照3秒运动时间计算
+            Log.d(TAG_2, fraction + "");
             // x方向100px/s ，则y方向0.5 * 200 * t * t，水平初速度100，重力加速度200计算
             PointF resultPointF = new PointF();
-            resultPointF.x = 100 * fraction ;
-            resultPointF.y = 0.5f * 200 * (fraction ) * (fraction );
+            resultPointF.x = 100 * fraction;
+            resultPointF.y = 0.5f * 200 * (fraction) * (fraction);
             return resultPointF;
         }
     }
 
-    private class PaoWuLineUpdateLister implements AnimatorUpdateListener {
+    private class PaoWuLineUpdateLister implements ValueAnimator.AnimatorUpdateListener {
         private View target;
 
         public PaoWuLineUpdateLister(View target) {
@@ -156,7 +155,7 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
             PointF pointF = (PointF) animation.getAnimatedValue();
             ViewCompat.setX(target, pointF.x);
             ViewCompat.setY(target, pointF.y);
-            ViewCompat.setAlpha(target, (float)1.2- animation.getAnimatedFraction());
+            ViewCompat.setAlpha(target, (float) 1.2 - animation.getAnimatedFraction());
         }
     }
 

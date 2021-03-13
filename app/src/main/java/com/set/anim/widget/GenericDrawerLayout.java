@@ -1,5 +1,9 @@
 package com.set.anim.widget;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -15,15 +19,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.AnimatorListenerAdapter;
-import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.animation.ValueAnimator;
-import com.nineoldandroids.view.ViewHelper;
-
 import java.util.concurrent.atomic.AtomicBoolean;
 
-//实现上下左右四个方向的抽屉效果
+/**
+ * 实现上下左右四个方向的抽屉效果
+ */
 public class GenericDrawerLayout extends FrameLayout {
 
     private static final String TAG = GenericDrawerLayout.class.getSimpleName();
@@ -819,10 +819,10 @@ public class GenericDrawerLayout extends FrameLayout {
             }
             Float animatedValue = (Float) animation.getAnimatedValue();
             if (isHorizontalGravity()) {
-                ViewHelper.setTranslationX(mContentLayout, animatedValue);
+                mContentLayout.setTranslationX(animatedValue);
                 translationCallback(mContentLayout.getWidth() - Math.abs(animatedValue));
             } else if (isVerticalGravity()) {
-                ViewHelper.setTranslationY(mContentLayout, animatedValue);
+                mContentLayout.setTranslationY(animatedValue);
                 translationCallback(mContentLayout.getHeight() - Math.abs(animatedValue));
             }
         }
@@ -940,12 +940,12 @@ public class GenericDrawerLayout extends FrameLayout {
         }
         if (isHorizontalGravity()) {
             // 使用兼容低版本的方法移动抽屉
-            ViewHelper.setTranslationX(mContentLayout, move);
+            mContentLayout.setTranslationX(move);
             // 回调事件
             translationCallback(mContentLayout.getWidth() - Math.abs(move));
         } else {
             // 使用兼容低版本的方法移动抽屉
-            ViewHelper.setTranslationY(mContentLayout, move);
+            mContentLayout.setTranslationY(move);
             // 回调事件
             translationCallback(mContentLayout.getHeight() - Math.abs(move));
         }
@@ -977,8 +977,8 @@ public class GenericDrawerLayout extends FrameLayout {
         }
 
         // 移动抽屉
-        ViewHelper.setTranslationX(mContentLayout, mStartTranslationX);
-        ViewHelper.setTranslationY(mContentLayout, mStartTranslationY);
+        mContentLayout.setTranslationX(mStartTranslationX);
+        mContentLayout.setTranslationY(mStartTranslationY);
     }
 
     /**
@@ -1008,11 +1008,11 @@ public class GenericDrawerLayout extends FrameLayout {
         switch (mTouchViewGravity) {
             case Gravity.LEFT:
             case Gravity.RIGHT:
-                curTranslation = ViewHelper.getTranslationX(mContentLayout);
+                curTranslation = mContentLayout.getTranslationX();
                 break;
             case Gravity.TOP:
             case Gravity.BOTTOM:
-                curTranslation = ViewHelper.getTranslationY(mContentLayout);
+                curTranslation = mContentLayout.getTranslationY();
                 break;
         }
         return curTranslation;

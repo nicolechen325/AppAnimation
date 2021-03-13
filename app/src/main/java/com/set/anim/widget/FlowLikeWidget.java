@@ -1,5 +1,11 @@
 package com.set.anim.widget;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
+import android.animation.TypeEvaluator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
@@ -10,13 +16,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.AnimatorListenerAdapter;
-import com.nineoldandroids.animation.AnimatorSet;
-import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.animation.TypeEvaluator;
-import com.nineoldandroids.animation.ValueAnimator;
-import com.pa.chen.animation.R;
+import com.set.animation.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,7 @@ public class FlowLikeWidget extends RelativeLayout {
     private int mPicHeight; // 图片的高度
 
     private int mChildViewHeight; // 在 XML 布局文件中添加的子View的总高度
-    
+
     public FlowLikeWidget(Context context) {
         this(context, null);
     }

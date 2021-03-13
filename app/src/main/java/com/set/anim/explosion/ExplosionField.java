@@ -31,7 +31,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-//爆炸动画的承载视图
+/**
+ * 爆炸动画的承载视图
+ */
 public class ExplosionField extends View {
 
     private List<ExplosionAnimator> mExplosions = new ArrayList<>();

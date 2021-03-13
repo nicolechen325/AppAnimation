@@ -2,9 +2,4 @@
     <string name="app_name">动画</string>
 
     <string name="load_image">正在加载</string>
-
-    <string name="tween_anim_desc">以视图中点为中心缩放，x轴*0.2，y轴*0.4。\n
-        透明度由1变为0.3。\n
-        中心为原点旋转180度。\n
-        x轴和y轴分別平移自身大小的100%。\n</string>
 </resources>

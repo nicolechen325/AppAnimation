@@ -17,9 +17,11 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.pa.chen.animation.R;
+import com.set.animation.R;
 
-//封装动画视图的布局
+/**
+ * 封装动画视图的布局
+ */
 public class LoadingView extends FrameLayout {
     private static final int ANIMATION_DURATION = 500;
     private static float mDistance = 400;

@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Scroller;
 
-import com.pa.chen.animation.R;
+import com.set.animation.R;
 
 /**
  * 上滑开门效果效果

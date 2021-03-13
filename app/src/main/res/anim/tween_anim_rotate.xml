@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 补间动画资源文件 配置匀速改变 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/linear_interpolator">
+    <!-- 旋转 -->
+    <rotate
+        android:duration="2000"
+        android:fromDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="180" />
+</set>

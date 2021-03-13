@@ -5,7 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.pa.chen.animation.R;
+import com.set.animation.R;
 
 /**
  * 1:继承AlterDialog，没有使用Builder内部类.
