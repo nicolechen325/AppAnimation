@@ -61,7 +61,6 @@ public class FlowLikeWidget extends RelativeLayout {
         mLikeDrawables.add(generateDrawable(R.drawable.heart5));
         mLikeDrawables.add(generateDrawable(R.drawable.heart6));
         mLikeDrawables.add(generateDrawable(R.drawable.heart7));
-        mLikeDrawables.add(generateDrawable(R.drawable.heart8));
 
         // 获取图片的宽高, 由于图片大小一致,故直接获取第一张图片的宽高
         mPicWidth = mLikeDrawables.get(0).getIntrinsicWidth();

@@ -24,7 +24,7 @@ public class OpenDoorActivity extends Activity implements PullDoorView.PullDoorC
 
     @Override
     public void onPullDoorSuccess() {
-        startActivity(new Intent(OpenDoorActivity.this, MainAnimDispatcherActivity.class));
+        startActivity(new Intent(OpenDoorActivity.this, MainAnimActivity.class));
         finish();
     }
 }

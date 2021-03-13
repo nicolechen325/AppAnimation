@@ -18,6 +18,8 @@ import com.set.anim.dialog3d.Dialog3dAnim;
 
 //import com.set.anim.jbox2dview.MobikeView;
 
+import com.set.anim.sample.FasterImageAnimActivity;
+import com.set.anim.sample.FrameAnimActivity;
 import com.set.anim.sample.ScrollerActivity;
 import com.set.anim.explosion.ExplosionActivity;
 import com.set.anim.loading.LoadingActivity;
@@ -30,10 +32,11 @@ import com.set.animation.R;
 //能量损失率，0-1之间
 //物体的密度
 //世界与屏幕的比率
+
 /**
  * 动画主页面
  */
-public class MainAnimDispatcherActivity extends Activity {
+public class MainAnimActivity extends Activity {
     private SensorManager sensorManager;
     private Sensor defaultSensor;
 
@@ -49,8 +52,42 @@ public class MainAnimDispatcherActivity extends Activity {
 
 //        mobikeView = (MobikeView) findViewById(R.id.mobike_view);
 
+    }
 
-        final ImageProgressDialog prDialog = new ImageProgressDialog(MainAnimDispatcherActivity.this,
+    public void btnPropertyAnim(View view) {
+        startActivity(new Intent(MainAnimActivity.this, PropertyAnimActivity.class));
+    }
+
+    public void btnTweenAnim(View view) {
+        startActivity(new Intent(MainAnimActivity.this, TweenAnimActivity.class));
+    }
+
+    public void btnFrameAnim(View view) {
+        startActivity(new Intent(MainAnimActivity.this, FrameAnimActivity.class));
+    }
+
+    public void btnFasterImageAnim(View view) {
+        startActivity(new Intent(MainAnimActivity.this, FasterImageAnimActivity.class));
+    }
+
+
+    public void btnScroller(View view) {
+        startActivity(new Intent(MainAnimActivity.this, ScrollerActivity.class));
+    }
+
+    public void btnExplosion(View view) {
+        startActivity(new Intent(MainAnimActivity.this, ExplosionActivity.class));
+    }
+
+    public void btnShowLoading(View view) {
+        startActivity(new Intent(MainAnimActivity.this, LoadingActivity.class));
+    }
+
+    public void btn3dDialog(View view) {
+        final Dialog3dAnim dialog = new Dialog3dAnim(this);
+        dialog.show();
+
+        final ImageProgressDialog prDialog = new ImageProgressDialog(MainAnimActivity.this,
                 R.style.dialog);
         prDialog.setCancelable(false);
         prDialog.show();
@@ -61,32 +98,6 @@ public class MainAnimDispatcherActivity extends Activity {
                 prDialog.stopRotate();
             }
         });
-
-    }
-
-    public void btnPropertyAnim(View view) {
-        startActivity(new Intent(MainAnimDispatcherActivity.this, PropertyAnimActivity.class));
-    }
-
-    public void btnTweenAnim(View view) {
-        startActivity(new Intent(MainAnimDispatcherActivity.this, TweenAnimActivity.class));
-    }
-
-    public void btnScroller(View view) {
-        startActivity(new Intent(MainAnimDispatcherActivity.this, ScrollerActivity.class));
-    }
-
-    public void btnExplosion(View view) {
-        startActivity(new Intent(MainAnimDispatcherActivity.this, ExplosionActivity.class));
-    }
-
-    public void btnShowLoading(View view) {
-        startActivity(new Intent(MainAnimDispatcherActivity.this, LoadingActivity.class));
-    }
-
-    public void btn3dDialog(View view) {
-        final Dialog3dAnim dialog = new Dialog3dAnim(this);
-        dialog.show();
     }
 
     @Override
