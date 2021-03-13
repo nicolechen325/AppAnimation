@@ -75,6 +75,10 @@ public class MainAnimActivity extends Activity {
         startActivity(new Intent(MainAnimActivity.this, ScrollerActivity.class));
     }
 
+    public void btnOpenDoor(View view) {
+        startActivity(new Intent(MainAnimActivity.this, OpenDoorActivity.class));
+    }
+
     public void btnExplosion(View view) {
         startActivity(new Intent(MainAnimActivity.this, ExplosionActivity.class));
     }

@@ -3,72 +3,88 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btn_rotate"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="X轴旋转"
-            android:textColor="#353535"
-          />
+            android:orientation="vertical"
+            android:padding="10dp">
 
-        <Button
-            android:id="@+id/btn_translate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="X轴平移"
-            android:textColor="#353535"
-            />
+            <TextView
+                android:id="@+id/btn_rotate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00f4f4"
+                android:paddingVertical="10dp"
+                android:text="X轴旋转"
+                android:textColor="#353535" />
 
-        <Button
-            android:id="@+id/btn_property_values_holder"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="一个动画改变多个属性"
-            android:textColor="#353535" />
+            <TextView
+                android:id="@+id/btn_translate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00f4f4"
+                android:paddingVertical="10dp"
+                android:text="X轴平移"
+                android:textColor="#353535" />
+
+            <TextView
+                android:id="@+id/btn_property_values_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00f4f4"
+                android:paddingVertical="10dp"
+                android:text="一个动画改变多个属性"
+                android:textColor="#353535" />
 
 
-        <Button
-            android:id="@+id/btn_paowuxian"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="抛物线"
-            android:textColor="#353535" />
+            <TextView
+                android:id="@+id/btn_paowuxian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00f4f4"
+                android:paddingVertical="10dp"
+                android:text="抛物线"
+                android:textColor="#353535" />
 
 
-        <Button
-            android:id="@+id/btn_view_anim"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="viewAnim"
-            android:textColor="#353535" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/btn_view_anim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="10dp"
+                android:background="#00f4f4"
+                android:text="viewAnim"
+                android:textColor="#353535" />
+        </LinearLayout>
+
+    </ScrollView>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#f4f4f4"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/id_ball"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#f8f8f8"
-        android:layout_gravity="center"
-        android:text="我是一个进行动画的控件哈！"/>
+        <TextView
+            android:id="@+id/id_ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#f8f8f8"
+            android:text="动画的控件！" />
 
         <TextView
             android:id="@+id/id_log"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""/>
+            android:text="" />
     </FrameLayout>
 </LinearLayout>

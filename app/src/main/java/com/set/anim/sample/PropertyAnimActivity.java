@@ -6,6 +6,7 @@ import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.PointF;
 import android.os.Bundle;
@@ -14,7 +15,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.set.animation.R;
@@ -32,28 +32,35 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_pro_anim_sample);
-        mTvAnimWidget = (TextView) findViewById(R.id.id_ball);
-        mTvLog = (TextView) findViewById(R.id.id_log);
-        Button mBtnRotate = (Button) findViewById(R.id.btn_rotate);
-        mBtnRotate.setOnClickListener(this);
-        Button mBtnTranslate = (Button) findViewById(R.id.btn_translate);
-        mBtnTranslate.setOnClickListener(this);
-        Button mBtnValuesHolder = (Button) findViewById(R.id.btn_property_values_holder);
-        mBtnValuesHolder.setOnClickListener(this);
-        Button mBtnPWX = (Button) findViewById(R.id.btn_paowuxian);
-        mBtnPWX.setOnClickListener(this);
-        Button mBtnViewAnim = (Button) findViewById(R.id.btn_view_anim);
+        mTvAnimWidget = findViewById(R.id.id_ball);
+        mTvLog = findViewById(R.id.id_log);
+
+        TextView mBtnRotate = findViewById(R.id.btn_rotate);
+        TextView mBtnTranslate = findViewById(R.id.btn_translate);
+        TextView mBtnValuesHolder = findViewById(R.id.btn_property_values_holder);
+        TextView mBtnPWX = findViewById(R.id.btn_paowuxian);
+        TextView mBtnViewAnim = findViewById(R.id.btn_view_anim);
+
         mBtnViewAnim.setOnClickListener(this);
+        mBtnTranslate.setOnClickListener(this);
+        mBtnRotate.setOnClickListener(this);
+        mBtnPWX.setOnClickListener(this);
+        mBtnValuesHolder.setOnClickListener(this);
     }
 
-    //X轴旋转
+    /**
+     * X轴旋转
+     *
+     * @param view
+     */
     public void rotateXAnim(final View view) {
         /*
          * 动画更新的时候不断调用setXxx更新属性,在setRotationX的时候如果没有重绘,
-         * 在AnimatorUpdateListener里还需增加view.invalidate();
+         * 在AnimatorUpdateListener里需增加view.invalidate();
          * rotationX属性就是通过setRotationX在一定duration时间内不断给属性赋值 从0到180 */
-        ObjectAnimator anim = ObjectAnimator.ofFloat(view, "rotationX", 0.0F,
-                180.0F).setDuration(3000);
+        float rotation = view.getRotationX();
+        ObjectAnimator anim = ObjectAnimator.ofFloat(view, "rotationX", rotation,
+                rotation + 180F).setDuration(2000);
         anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
@@ -64,7 +71,11 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
         anim.start();
     }
 
-    //X轴平移
+    /**
+     * X轴平移
+     *
+     * @param view
+     */
     public void translationXAnim(final View view) {
         ObjectAnimator anim = ObjectAnimator.ofFloat(view, "translationX", 0,
                 300).setDuration(2000);
@@ -82,15 +93,16 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
             public void onAnimationUpdate(ValueAnimator animation) {
                 float mFra = animation.getAnimatedFraction();//运行比例
                 StringBuilder printLog = new StringBuilder();
+                printLog.append("Fraction=");
                 printLog.append(mFra);
                 printLog.append("\n");
-                printLog.append("::mLeft=");
+                printLog.append("mLeft=");
                 printLog.append(mTvAnimWidget.getLeft());
                 printLog.append("\n");
-                printLog.append("::translationX=");
+                printLog.append("translationX=");
                 printLog.append(mTvAnimWidget.getTranslationX());
                 printLog.append("\n");
-                printLog.append("::X=");
+                printLog.append("X=");
                 printLog.append(mTvAnimWidget.getX());
                 mTvLog.setText(printLog);
             }
@@ -98,8 +110,12 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
         anim.start();
     }
 
-    //实现一个动画更改多个效果：使用propertyValuesHolder 注意 是一个动画 并不是多个动画的叠加
-    //一个PropertyValuesHolder代表一个个属性 在一定时间的值的范围
+    /**
+     * 一个动画更改多个效果：使用propertyValuesHolder 注意,并不是多个动画的叠加
+     * 一个PropertyValuesHolder代表一个个属性 在一定时间的值的范围
+     *
+     * @param view
+     */
     public void propertyValuesHolder(View view) {
         PropertyValuesHolder pvhX = PropertyValuesHolder.ofFloat("alpha", 1f,
                 0.5f, 1f);
@@ -111,22 +127,30 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
                 .setDuration(2000).start();
     }
 
-    //抛物线ofInt,ofFloat由PointF代替
+    /**
+     * 抛物线ofInt,ofFloat由PointF代替
+     *
+     * @param target
+     */
     public void paoWuXianAnim(final View target) {
-        ValueAnimator valueAnimator = ValueAnimator.ofObject(new PaoWuLineEvaluator(), new PointF(0, 0));
-        valueAnimator.setDuration(3000);
-        valueAnimator.setInterpolator(new LinearInterpolator());
-        valueAnimator.addUpdateListener(new PaoWuLineUpdateLister(target));
-        valueAnimator.addListener(new AnimatorListenerAdapter() {
+        ValueAnimator animator = ValueAnimator.ofObject(new PaoWuLineEvaluator(), new PointF(0, 0));
+        animator.setDuration(2000);
+        animator.setInterpolator(new LinearInterpolator());
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
-            public void onAnimationEnd(Animator animation) {
-                ViewGroup parent = (ViewGroup) target.getParent();
-                if (parent != null) {
-                    //parent.removeView(view);可以删除视图
-                }
+            public void onAnimationUpdate(ValueAnimator animation) {
+                PointF pointF = (PointF) animation.getAnimatedValue();
+                target.setX(pointF.x);
+                target.setY(pointF.y);
+                target.setAlpha((float) 1.2 - animation.getAnimatedFraction());
             }
         });
-        valueAnimator.start();
+        animator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+            }
+        });
+        animator.start();
     }
 
     private class PaoWuLineEvaluator implements TypeEvaluator<PointF> {
@@ -153,33 +177,41 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
         @Override
         public void onAnimationUpdate(ValueAnimator animation) {
             PointF pointF = (PointF) animation.getAnimatedValue();
-            ViewCompat.setX(target, pointF.x);
-            ViewCompat.setY(target, pointF.y);
-            ViewCompat.setAlpha(target, (float) 1.2 - animation.getAnimatedFraction());
+            target.setX(pointF.x);
+            target.setY(pointF.y);
+            target.setAlpha((float) 1.2 - animation.getAnimatedFraction());
         }
     }
 
-    public void viewAnim(final View view) {
+    /**
+     * View 内部 mAnimator
+     *
+     * @param view
+     */
+    public void viewAnimate(final View view) {
         view.animate()
-                .alpha(0)//3秒内变透明 ，并且往y方向增加1200像素
-                .y(1200).setDuration(3000)
+                .alpha(0.4f)//3秒内变透明度 0.4f
+                .y(1200)//往y方向增加1200像素
+                .x(500)//往x方向增加200像素
+                .setDuration(1000)
                 .withEndAction(new Runnable() {
                     @Override
-                    public void run() {/*view动画结束后 执行*/
-                        view.setY(0); //最后在父View坐标系内Y值为0处。
+                    public void run() {
+                        /*view动画结束后 执行*/
                         view.setAlpha(1.0f);
                     }
                 }).start();
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_rotate:
-                rotateXAnim(mTvAnimWidget);
-                break;
             case R.id.btn_translate:
                 translationXAnim(mTvAnimWidget);
+                break;
+            case R.id.btn_rotate:
+                rotateXAnim(mTvAnimWidget);
                 break;
             case R.id.btn_property_values_holder:
                 propertyValuesHolder(mTvAnimWidget);
@@ -188,7 +220,7 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
                 paoWuXianAnim(mTvAnimWidget);
                 break;
             case R.id.btn_view_anim:
-                viewAnim(mTvAnimWidget);
+                viewAnimate(mTvAnimWidget);
                 break;
             default:
                 break;
@@ -199,5 +231,4 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
     protected void onDestroy() {
         super.onDestroy();
     }
-
 }

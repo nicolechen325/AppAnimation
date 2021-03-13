@@ -8,15 +8,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.set.anim.OpenDoorActivity">
+
+        <!--动画主页-->
+        <activity android:name="com.set.anim.MainAnimActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--动画主页-->
-        <activity android:name="com.set.anim.MainAnimActivity"/>
         <!--各类动画Activity-->
         <activity android:name="com.set.anim.sample.TweenAnimActivity" />
         <activity android:name="com.set.anim.sample.PropertyAnimActivity" />
@@ -25,6 +25,7 @@
         <activity android:name="com.set.anim.loading.LoadingActivity" />
         <activity android:name="com.set.anim.sample.FrameAnimActivity" />
         <activity android:name="com.set.anim.sample.FasterImageAnimActivity" />
+        <activity android:name="com.set.anim.OpenDoorActivity" />
 
 
     </application>
