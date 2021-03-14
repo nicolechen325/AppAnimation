@@ -26,6 +26,7 @@
         <activity android:name="com.set.anim.sample.FrameAnimActivity" />
         <activity android:name="com.set.anim.sample.FasterImageAnimActivity" />
         <activity android:name="com.set.anim.sample.OpenDoorActivity" />
+        <activity android:name="com.set.anim.sample.TweenInterpolatorActivity" />
 
 
     </application>

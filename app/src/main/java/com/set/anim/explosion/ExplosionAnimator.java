@@ -60,7 +60,7 @@ public class ExplosionAnimator extends ValueAnimator {
         }
         mContainer = container;
         setFloatValues(0f, END_VALUE);//动画范围值
-        setInterpolator(DEFAULT_INTERPOLATOR);//加速差值器
+        setInterpolator(DEFAULT_INTERPOLATOR);//加速插值器
         setDuration(DEFAULT_DURATION);
     }
 

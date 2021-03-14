@@ -9,6 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import com.set.anim.widget.DrawAnimationTextView;
 import com.set.animation.R;
 
 /**
@@ -17,17 +18,17 @@ import com.set.animation.R;
 public class TweenAnimActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG_1 = "TweenAnimActivity";
 
-    TextView mTextViewAlpha;
-    TextView mTextViewTranslate;
-    TextView mTextViewRotate;
-    TextView mTextViewScale;
-    TextView mTextViewAll;
+    DrawAnimationTextView mTextViewAlpha;
+    DrawAnimationTextView mTextViewTranslate;
+    DrawAnimationTextView mTextViewRotate;
+    DrawAnimationTextView mTextViewScale;
+    DrawAnimationTextView mTextViewAll;
 
-    Animation animationAll;
     Animation animationScale;
     Animation animationRotate;
     Animation animationTranslate;
     Animation animationAlpha;
+    Animation animationAll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -39,6 +39,15 @@
             android:text="属性动画"
             android:textColor="#949494" />
 
+        <Button
+            android:id="@+id/btn_anim_interpolator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="btnTweenInterpolatorAnim"
+            android:text="插值器"
+            android:textColor="#949494" />
 
         <Button
             android:id="@+id/btn_scroller"

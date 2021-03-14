@@ -211,6 +211,9 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
         animator.start();
     }
 
+    /**
+     * 估值器
+     */
     private class PaoWuLineEvaluator implements TypeEvaluator<PointF> {
         @Override
         public PointF evaluate(float fraction, PointF startValue, PointF endValue) {

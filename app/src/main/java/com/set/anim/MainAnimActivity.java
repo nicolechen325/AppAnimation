@@ -16,6 +16,7 @@ import com.set.anim.explosion.ExplosionActivity;
 import com.set.anim.loading.LoadingActivity;
 import com.set.anim.sample.PropertyAnimActivity;
 import com.set.anim.sample.TweenAnimActivity;
+import com.set.anim.sample.TweenInterpolatorActivity;
 import com.set.anim.widget.ImageProgressDialog;
 import com.set.animation.R;
 
@@ -38,6 +39,10 @@ public class MainAnimActivity extends AppCompatActivity {
         startActivity(new Intent(MainAnimActivity.this, TweenAnimActivity.class));
     }
 
+    //插值器
+    public void btnTweenInterpolatorAnim(View view) {
+        startActivity(new Intent(MainAnimActivity.this, TweenInterpolatorActivity.class));
+    }
     public void btnFrameAnim(View view) {
         startActivity(new Intent(MainAnimActivity.this, FrameAnimActivity.class));
     }

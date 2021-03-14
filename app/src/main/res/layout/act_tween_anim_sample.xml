@@ -8,17 +8,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
+        <com.set.anim.widget.DrawAnimationLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="#cfcfcf"
             android:orientation="horizontal">
 
-            <TextView
+            <com.set.anim.widget.DrawAnimationTextView
                 android:id="@+id/tv_anim_scale"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:background="#cccaaa"
+                android:background="#00afcc"
                 android:gravity="center"
                 android:text="缩放"
                 android:textSize="18sp" />
@@ -27,20 +27,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher" />
-        </LinearLayout>
+        </com.set.anim.widget.DrawAnimationLayout>
 
-        <LinearLayout
+        <com.set.anim.widget.DrawAnimationLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="#cfcfcf"
             android:orientation="horizontal">
 
-            <TextView
+            <com.set.anim.widget.DrawAnimationTextView
                 android:id="@+id/tv_anim_alpha"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:background="#cccaaa"
+                android:background="#00afcc"
                 android:gravity="center"
                 android:text="透明度"
                 android:textSize="18sp" />
@@ -49,20 +49,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher" />
-        </LinearLayout>
+        </com.set.anim.widget.DrawAnimationLayout>
 
-        <LinearLayout
+        <com.set.anim.widget.DrawAnimationLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="#cfcfcf"
             android:orientation="horizontal">
 
-            <TextView
+            <com.set.anim.widget.DrawAnimationTextView
                 android:id="@+id/tv_anim_translate"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:background="#cccaaa"
+                android:background="#00afcc"
                 android:gravity="center"
                 android:text="平移"
                 android:textSize="18sp" />
@@ -71,20 +71,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher" />
-        </LinearLayout>
+        </com.set.anim.widget.DrawAnimationLayout>
 
-        <LinearLayout
+        <com.set.anim.widget.DrawAnimationLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="#cfcfcf"
             android:orientation="horizontal">
 
-            <TextView
+            <com.set.anim.widget.DrawAnimationTextView
                 android:id="@+id/tv_anim_rotate"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:background="#cccaaa"
+                android:background="#00afcc"
                 android:gravity="center"
                 android:text="旋转"
                 android:textSize="18sp" />
@@ -93,21 +93,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher" />
-        </LinearLayout>
+        </com.set.anim.widget.DrawAnimationLayout>
 
 
-        <LinearLayout
+        <com.set.anim.widget.DrawAnimationLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="#cfcfcf"
             android:orientation="horizontal">
 
-            <TextView
+            <com.set.anim.widget.DrawAnimationTextView
                 android:id="@+id/tv_anim_all"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:background="#cccaaa"
+                android:background="#00afcc"
                 android:gravity="center"
                 android:text="All"
                 android:textSize="18sp" />
@@ -116,6 +116,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher" />
-        </LinearLayout>
+        </com.set.anim.widget.DrawAnimationLayout>
     </LinearLayout>
 </ScrollView>
