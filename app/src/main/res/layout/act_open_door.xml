@@ -4,7 +4,7 @@
     android:background="#00ffffff"
     android:layout_height="match_parent" >
 
-    <com.set.anim.widget.PullDoorView
+    <com.set.view.widget.PullDoorView
         android:id="@+id/pull_door_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -19,6 +19,6 @@
             android:text="上滑可以进入首页"
             android:textColor="#99ffffff"
             android:textSize="28sp" />
-    </com.set.anim.widget.PullDoorView>
+    </com.set.view.widget.PullDoorView>
 
 </RelativeLayout>

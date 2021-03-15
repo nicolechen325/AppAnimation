@@ -8,13 +8,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.set.anim.widget.DrawAnimationLayout
+        <com.set.view.widget.DrawAnimationLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="#cfcfcf"
             android:orientation="horizontal">
 
-            <com.set.anim.widget.DrawAnimationTextView
+            <com.set.view.widget.DrawAnimationTextView
                 android:id="@+id/tv_anim_scale"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
@@ -27,16 +27,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher" />
-        </com.set.anim.widget.DrawAnimationLayout>
+        </com.set.view.widget.DrawAnimationLayout>
 
-        <com.set.anim.widget.DrawAnimationLayout
+        <com.set.view.widget.DrawAnimationLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="#cfcfcf"
             android:orientation="horizontal">
 
-            <com.set.anim.widget.DrawAnimationTextView
+            <com.set.view.widget.DrawAnimationTextView
                 android:id="@+id/tv_anim_alpha"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
@@ -49,16 +49,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher" />
-        </com.set.anim.widget.DrawAnimationLayout>
+        </com.set.view.widget.DrawAnimationLayout>
 
-        <com.set.anim.widget.DrawAnimationLayout
+        <com.set.view.widget.DrawAnimationLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="#cfcfcf"
             android:orientation="horizontal">
 
-            <com.set.anim.widget.DrawAnimationTextView
+            <com.set.view.widget.DrawAnimationTextView
                 android:id="@+id/tv_anim_translate"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
@@ -71,16 +71,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher" />
-        </com.set.anim.widget.DrawAnimationLayout>
+        </com.set.view.widget.DrawAnimationLayout>
 
-        <com.set.anim.widget.DrawAnimationLayout
+        <com.set.view.widget.DrawAnimationLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="#cfcfcf"
             android:orientation="horizontal">
 
-            <com.set.anim.widget.DrawAnimationTextView
+            <com.set.view.widget.DrawAnimationTextView
                 android:id="@+id/tv_anim_rotate"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
@@ -93,17 +93,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher" />
-        </com.set.anim.widget.DrawAnimationLayout>
+        </com.set.view.widget.DrawAnimationLayout>
 
 
-        <com.set.anim.widget.DrawAnimationLayout
+        <com.set.view.widget.DrawAnimationLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="#cfcfcf"
             android:orientation="horizontal">
 
-            <com.set.anim.widget.DrawAnimationTextView
+            <com.set.view.widget.DrawAnimationTextView
                 android:id="@+id/tv_anim_all"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
@@ -116,6 +116,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher" />
-        </com.set.anim.widget.DrawAnimationLayout>
+        </com.set.view.widget.DrawAnimationLayout>
     </LinearLayout>
 </ScrollView>

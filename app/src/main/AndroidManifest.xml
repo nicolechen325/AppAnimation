@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.set.animation">
+    package="com.set.view">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <!--动画主页-->
-        <activity android:name="com.set.anim.MainViewActivity">
+        <activity android:name="com.set.view.MainViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,16 +18,16 @@
             </intent-filter>
         </activity>
         <!--各类动画Activity-->
-        <activity android:name="com.set.anim.sample.TweenAnimActivity" />
-        <activity android:name="com.set.anim.sample.PropertyAnimActivity" />
-        <activity android:name="com.set.anim.sample.ScrollerActivity" />
-        <activity android:name="com.set.anim.explosion.ExplosionActivity" />
-        <activity android:name="com.set.anim.loading.LoadingActivity" />
-        <activity android:name="com.set.anim.sample.FrameAnimActivity" />
-        <activity android:name="com.set.anim.sample.FasterImageAnimActivity" />
-        <activity android:name="com.set.anim.sample.OpenDoorActivity" />
-        <activity android:name="com.set.anim.sample.TweenInterpolatorActivity" />
-        <activity android:name="com.set.anim.sample.ViewTranslationActivity" />
+        <activity android:name="com.set.view.sample.TweenAnimActivity" />
+        <activity android:name="com.set.view.sample.PropertyAnimActivity" />
+        <activity android:name="com.set.view.sample.ScrollerActivity" />
+        <activity android:name="com.set.view.explosion.ExplosionActivity" />
+        <activity android:name="com.set.view.loading.LoadingActivity" />
+        <activity android:name="com.set.view.sample.FrameAnimActivity" />
+        <activity android:name="com.set.view.sample.FasterImageAnimActivity" />
+        <activity android:name="com.set.view.sample.OpenDoorActivity" />
+        <activity android:name="com.set.view.sample.TweenInterpolatorActivity" />
+        <activity android:name="com.set.view.sample.ViewTranslationActivity" />
 
     </application>
 
