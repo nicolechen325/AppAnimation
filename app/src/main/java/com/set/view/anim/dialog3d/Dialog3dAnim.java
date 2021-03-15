@@ -1,4 +1,4 @@
-package com.set.view.dialog3d;
+package com.set.view.anim.dialog3d;
 
 import android.app.Dialog;
 import android.content.Context;

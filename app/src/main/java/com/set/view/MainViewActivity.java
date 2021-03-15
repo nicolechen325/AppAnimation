@@ -6,20 +6,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.set.view.dialog3d.Dialog3dAnim;
-
-import com.set.view.sample.FasterImageAnimActivity;
-import com.set.view.sample.FrameAnimActivity;
-import com.set.view.sample.OpenDoorActivity;
-import com.set.view.sample.ScrollerActivity;
-import com.set.view.explosion.ExplosionActivity;
-import com.set.view.loading.LoadingActivity;
-import com.set.view.sample.PropertyAnimActivity;
-import com.set.view.sample.TweenAnimActivity;
-import com.set.view.sample.TweenInterpolatorActivity;
-import com.set.view.sample.ViewTranslationActivity;
+import com.set.view.anim.sample.FasterImageAnimActivity;
+import com.set.view.anim.sample.FrameAnimActivity;
+import com.set.view.anim.sample.OpenDoorActivity;
+import com.set.view.anim.sample.ScrollerActivity;
+import com.set.view.anim.sample.PropertyAnimActivity;
+import com.set.view.anim.sample.TweenAnimActivity;
+import com.set.view.anim.sample.TweenInterpolatorActivity;
+import com.set.view.anim.sample.ViewTranslationActivity;
+import com.set.view.anim.explosion.ExplosionActivity;
+import com.set.view.anim.loading.LoadingActivity;
 import com.set.view.widget.ImageProgressDialog;
-import com.set.view.R;
+import com.set.view.anim.dialog3d.Dialog3dAnim;
 
 /**
  * 主页面

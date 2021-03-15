@@ -1,4 +1,4 @@
-package com.set.view.loading;
+package com.set.view.anim.loading;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;

@@ -1,4 +1,4 @@
-package com.set.view.dialog3d;
+package com.set.view.anim.dialog3d;
 
 import android.graphics.Camera;
 import android.graphics.Matrix;

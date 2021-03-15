@@ -1,4 +1,4 @@
-package com.set.view.explosion;
+package com.set.view.anim.explosion;
 
 import android.app.Activity;
 import android.os.Bundle;

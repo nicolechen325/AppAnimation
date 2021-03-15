@@ -1,4 +1,4 @@
-package com.set.view.sample;
+package com.set.view.anim.sample;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

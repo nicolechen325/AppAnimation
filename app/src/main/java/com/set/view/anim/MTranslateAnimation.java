@@ -1,4 +1,4 @@
-package com.set.view.animation;
+package com.set.view.anim;
 
 import android.content.Context;
 import android.util.AttributeSet;
