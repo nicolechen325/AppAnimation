@@ -27,6 +27,20 @@ public class DrawAnimationLayout extends LinearLayout {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
+    /**
+     * 子视图动画， 父视图调用 invalidate()方法，刷新区域。
+     * parent.invalidate(l, t, r, b)
+     * @param l
+     * @param t
+     * @param r
+     * @param b
+     */
+    @Override
+    public void invalidate(int l, int t, int r, int b) {
+        super.invalidate(l, t, r, b);
+        Log.d("TAG_invalidate", "left:" + l + ",top:" + t + ",right:" + r + ",bottom:" + b);
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);

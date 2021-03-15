@@ -17,13 +17,14 @@ import com.set.anim.loading.LoadingActivity;
 import com.set.anim.sample.PropertyAnimActivity;
 import com.set.anim.sample.TweenAnimActivity;
 import com.set.anim.sample.TweenInterpolatorActivity;
+import com.set.anim.sample.ViewTranslationActivity;
 import com.set.anim.widget.ImageProgressDialog;
 import com.set.animation.R;
 
 /**
- * 动画主页面
+ * 主页面
  */
-public class MainAnimActivity extends AppCompatActivity {
+public class MainViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,47 +33,54 @@ public class MainAnimActivity extends AppCompatActivity {
     }
 
     public void btnPropertyAnim(View view) {
-        startActivity(new Intent(MainAnimActivity.this, PropertyAnimActivity.class));
+        startActivity(new Intent(MainViewActivity.this, PropertyAnimActivity.class));
     }
 
     public void btnTweenAnim(View view) {
-        startActivity(new Intent(MainAnimActivity.this, TweenAnimActivity.class));
+        startActivity(new Intent(MainViewActivity.this, TweenAnimActivity.class));
     }
 
     //插值器
     public void btnTweenInterpolatorAnim(View view) {
-        startActivity(new Intent(MainAnimActivity.this, TweenInterpolatorActivity.class));
+        startActivity(new Intent(MainViewActivity.this, TweenInterpolatorActivity.class));
     }
+
+    //帧动画
     public void btnFrameAnim(View view) {
-        startActivity(new Intent(MainAnimActivity.this, FrameAnimActivity.class));
+        startActivity(new Intent(MainViewActivity.this, FrameAnimActivity.class));
     }
 
+    //ImageView快速闪动
     public void btnFasterImageAnim(View view) {
-        startActivity(new Intent(MainAnimActivity.this, FasterImageAnimActivity.class));
+        startActivity(new Intent(MainViewActivity.this, FasterImageAnimActivity.class));
     }
-
 
     public void btnScroller(View view) {
-        startActivity(new Intent(MainAnimActivity.this, ScrollerActivity.class));
+        startActivity(new Intent(MainViewActivity.this, ScrollerActivity.class));
     }
 
     public void btnOpenDoor(View view) {
-        startActivity(new Intent(MainAnimActivity.this, OpenDoorActivity.class));
+        startActivity(new Intent(MainViewActivity.this, OpenDoorActivity.class));
     }
 
     public void btnExplosion(View view) {
-        startActivity(new Intent(MainAnimActivity.this, ExplosionActivity.class));
+        startActivity(new Intent(MainViewActivity.this, ExplosionActivity.class));
     }
 
     public void btnShowLoading(View view) {
-        startActivity(new Intent(MainAnimActivity.this, LoadingActivity.class));
+        startActivity(new Intent(MainViewActivity.this, LoadingActivity.class));
+    }
+
+    //视图属性
+    public void btnTranslationView(View view) {
+        startActivity(new Intent(MainViewActivity.this, ViewTranslationActivity.class));
     }
 
     public void btn3dDialog(View view) {
         final Dialog3dAnim dialog = new Dialog3dAnim(this);
         dialog.show();
 
-        final ImageProgressDialog prDialog = new ImageProgressDialog(MainAnimActivity.this,
+        final ImageProgressDialog prDialog = new ImageProgressDialog(MainViewActivity.this,
                 R.style.dialog);
         prDialog.setCancelable(false);
         prDialog.show();

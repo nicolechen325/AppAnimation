@@ -2,11 +2,8 @@ package com.set.anim.loading;
 
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.os.Bundle;
 
-import com.set.anim.MainAnimActivity;
-import com.set.anim.widget.ImageProgressDialog;
 import com.set.animation.R;
 
 public class LoadingActivity extends Activity {

@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <!--动画主页-->
-        <activity android:name="com.set.anim.MainAnimActivity">
+        <activity android:name="com.set.anim.MainViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +27,7 @@
         <activity android:name="com.set.anim.sample.FasterImageAnimActivity" />
         <activity android:name="com.set.anim.sample.OpenDoorActivity" />
         <activity android:name="com.set.anim.sample.TweenInterpolatorActivity" />
-
+        <activity android:name="com.set.anim.sample.ViewTranslationActivity" />
 
     </application>
 

@@ -66,7 +66,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:onClick="btnOpenDoor"
-            android:text="Scroller弹性动画"
+            android:text="开门动画"
             android:textColor="#949494" />
 
         <Button
@@ -109,6 +109,17 @@
             android:onClick="btn3dDialog"
             android:text="3d对话框动画"
             android:textColor="#949494" />
+
+        <Button
+            android:id="@+id/btn_translations"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="btnTranslationView"
+            android:text="View属性"
+            android:textColor="#949494" />
+
     </LinearLayout>
 
 </ScrollView>
