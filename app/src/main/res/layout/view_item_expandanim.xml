@@ -4,12 +4,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/main_recyclerview"
+    <TextView
+        android:id="@+id/tv_expanded"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
+        android:layout_height="80dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="消息内容"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
 </LinearLayout>
-
-
