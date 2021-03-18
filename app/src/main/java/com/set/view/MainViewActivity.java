@@ -67,7 +67,6 @@ public class MainViewActivity extends AppCompatActivity {
         mainItemMap.put(10, "View属性");
         mainItemMap.put(11, "Surface");
 
-
         for (int m = 0; m < mainItemMap.size(); m++) {
             ItemEntry<Type3Entity> itemsEntry0 = new ItemEntry();
             itemsEntry0.data = new Type3Entity(mainItemMap.get(m));
@@ -91,31 +90,31 @@ public class MainViewActivity extends AppCompatActivity {
 
         switch (position) {
             case 0://补间动画
-                startActivity(new Intent(MainViewActivity.this, TweenAnimActivity.class));
+                toActivity(TweenAnimActivity.class);
                 break;
             case 1://属性
-                startActivity(new Intent(MainViewActivity.this, PropertyAnimActivity.class));
+                toActivity(PropertyAnimActivity.class);
                 break;
             case 2://帧动画
-                startActivity(new Intent(MainViewActivity.this, FrameAnimActivity.class));
+                toActivity(FrameAnimActivity.class);
                 break;
             case 3://插值器
-                startActivity(new Intent(MainViewActivity.this, TweenInterpolatorActivity.class));
+                toActivity(TweenInterpolatorActivity.class);
                 break;
             case 4://scroller
-                startActivity(new Intent(MainViewActivity.this, ScrollerActivity.class));
+                toActivity(ScrollerActivity.class);
                 break;
             case 5: //ImageView快速闪动
-                startActivity(new Intent(MainViewActivity.this, FasterImageAnimActivity.class));
+                toActivity(FasterImageAnimActivity.class);
                 break;
             case 6://opendoor
-                startActivity(new Intent(MainViewActivity.this, OpenDoorActivity.class));
+                toActivity(OpenDoorActivity.class);
                 break;
             case 7://爆炸
-                startActivity(new Intent(MainViewActivity.this, ExplosionActivity.class));
+                toActivity(ExplosionActivity.class);
                 break;
             case 8://loading
-                startActivity(new Intent(MainViewActivity.this, LoadingActivity.class));
+                toActivity(LoadingActivity.class);
                 break;
             case 9://3ddialog
                 final Dialog3dAnim dialog = new Dialog3dAnim(this);
@@ -134,17 +133,20 @@ public class MainViewActivity extends AppCompatActivity {
                 });
                 break;
             case 10:
-                startActivity(new Intent(MainViewActivity.this, ViewTranslationActivity.class));
+                toActivity(ViewTranslationActivity.class);
                 break;
             case 11:
-                startActivity(new Intent(MainViewActivity.this, SurfaceMainActivity.class));
+                toActivity(SurfaceMainActivity.class);
                 break;
             default:
                 break;
-
-
         }
     }
 
+
+    void toActivity(Class<?> cls) {
+        Intent intent = new Intent(MainViewActivity.this, cls);
+        startActivity(intent);
+    }
 
 }
