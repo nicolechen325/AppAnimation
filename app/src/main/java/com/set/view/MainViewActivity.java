@@ -28,14 +28,16 @@ import com.set.view.scroll.entity.Bean;
 import com.set.view.scroll.entity.ItemEntry;
 import com.set.view.scroll.entity.MoreViewEntry;
 import com.set.view.scroll.entity.Type3Entity;
+import com.set.view.surface.SurfaceMainActivity;
 import com.set.view.widget.ImageProgressDialog;
 import com.set.view.anim.dialog3d.Dialog3dAnim;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
- * 主页面
+ * 主页
  */
 public class MainViewActivity extends AppCompatActivity {
     private List<ItemEntry> mDataList = new ArrayList<>();
@@ -51,23 +53,24 @@ public class MainViewActivity extends AppCompatActivity {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
         mRecyclerView.setLayoutManager(gridLayoutManager);
 
-        String[] mainItem = {
-                "补间动画",
-                "属性动画",
-                "帧动画",
-                "插值器",
-                "Scroller弹性动画",
-                "图片快速闪动替换",
-                "开门动画",
-                "爆炸效果",
-                "加载效果",
-                "3d对话框动画",
-                "View属性"
-        };
+        HashMap<Integer, String> mainItemMap = new HashMap();
+        mainItemMap.put(0, "补间动画");
+        mainItemMap.put(1, "属性动画");
+        mainItemMap.put(2, "帧动画");
+        mainItemMap.put(3, "插值器");
+        mainItemMap.put(4, "Scroller弹性动画");
+        mainItemMap.put(5, "图片快速闪动替换");
+        mainItemMap.put(6, "开门动画");
+        mainItemMap.put(7, "爆炸效果");
+        mainItemMap.put(8, "加载效果");
+        mainItemMap.put(9, "3d对话框动画");
+        mainItemMap.put(10, "View属性");
+        mainItemMap.put(11, "Surface");
 
-        for (int m = 0; m < 11; m++) {
+
+        for (int m = 0; m < mainItemMap.size(); m++) {
             ItemEntry<Type3Entity> itemsEntry0 = new ItemEntry();
-            itemsEntry0.data = new Type3Entity(mainItem[m]);
+            itemsEntry0.data = new Type3Entity(mainItemMap.get(m));
             itemsEntry0.itemClickListener = new BaseAdapter.OnItemClickListener() {
                 @Override
                 public void onClick(int position) {
@@ -132,6 +135,9 @@ public class MainViewActivity extends AppCompatActivity {
                 break;
             case 10:
                 startActivity(new Intent(MainViewActivity.this, ViewTranslationActivity.class));
+                break;
+            case 11:
+                startActivity(new Intent(MainViewActivity.this, SurfaceMainActivity.class));
                 break;
             default:
                 break;
