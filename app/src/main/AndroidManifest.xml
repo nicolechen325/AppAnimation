@@ -45,6 +45,11 @@
         <activity android:name=".image.ImageScaleActivity" />
         <activity android:name=".image.NinePngActivity" />
 
+        <!-- Scroll -->
+        <activity
+            android:name=".scroll.coordinator.CoordinatorActivity"
+            android:theme="@style/AppThemeNoBar" />
+
         <!--View-->
         <activity android:name=".toolview.ViewTranslationActivity" />
 
