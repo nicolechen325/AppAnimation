@@ -1,18 +1,18 @@
 package com.set.view.scroll;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.widget.Toast;
 
 import com.set.view.R;
-import com.set.view.scroll.FloorType;
 import com.set.view.scroll.adapter.BaseAdapter;
 import com.set.view.scroll.adapter.BuAdapter;
 import com.set.view.scroll.entity.Bean;
-import com.set.view.scroll.entity.ExpendItemEntity;
 import com.set.view.scroll.entity.ItemEntry;
 import com.set.view.scroll.entity.MoreViewEntry;
 import com.set.view.scroll.entity.Type3Entity;

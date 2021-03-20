@@ -2,7 +2,6 @@ package com.set.view.surface.video;
 
 import android.content.Context;
 import android.os.CountDownTimer;
-import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +10,9 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import androidx.appcompat.widget.AppCompatTextView;
+
 import com.set.view.R;
 
 /**

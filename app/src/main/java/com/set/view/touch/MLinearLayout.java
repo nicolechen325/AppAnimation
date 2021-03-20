@@ -2,8 +2,6 @@ package com.set.view.touch;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.support.v4.view.MotionEventCompat;
-import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -11,7 +9,12 @@ import android.view.VelocityTracker;
 import android.widget.LinearLayout;
 import android.widget.OverScroller;
 
-//类似于ios的弹性效果。 重写LinearLayout,横向滚动
+import androidx.core.view.MotionEventCompat;
+import androidx.core.view.ViewCompat;
+
+/**
+ * 类似于ios的弹性效果。 重写LinearLayout,横向滚动
+ */
 public class MLinearLayout extends LinearLayout {
     public final String TAG = "ChenLinearLayout";
     private OverScroller mScroller;

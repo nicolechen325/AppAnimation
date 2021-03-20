@@ -4,12 +4,13 @@ import com.set.view.anim.AnimRouteActivity;
 import com.set.view.image.ImageRouteActivity;
 import com.set.view.toolview.ViewTranslationActivity;
 import com.set.view.surface.SurfaceRouteActivity;
+import com.set.view.touch.TouchEventActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 主页
+ * 首页
  */
 public class MainActivity extends BaseGridViewActivity {
 
@@ -20,6 +21,7 @@ public class MainActivity extends BaseGridViewActivity {
         list.add(new EntryItem(1, "Image", ImageRouteActivity.class));
         list.add(new EntryItem(2, "View", ViewTranslationActivity.class));
         list.add(new EntryItem(3, "Surface", SurfaceRouteActivity.class));
+        list.add(new EntryItem(3, "Touch", TouchEventActivity.class));
         return list;
     }
 }

@@ -1,7 +1,9 @@
 package com.set.view.scroll.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.ViewGroup;
 
 import com.set.view.scroll.entity.ItemEntry;
@@ -11,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * RecyclerView Adapter
  */
 public class BaseAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder> {
     public interface OnItemClickListener {

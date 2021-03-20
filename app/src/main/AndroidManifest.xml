@@ -14,10 +14,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--动画主页-->
+        <!--主页-->
         <activity android:name="com.set.view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,8 +27,7 @@
             </intent-filter>
         </activity>
 
-        <!--各类动画Activity-->
-
+        <!--各类动画-->
         <activity android:name=".anim.AnimRouteActivity" />
         <activity android:name=".anim.sample.TweenAnimActivity" />
         <activity android:name=".anim.sample.PropertyAnimActivity" />
@@ -45,9 +45,13 @@
         <activity android:name=".image.ImageScaleActivity" />
         <activity android:name=".image.NinePngActivity" />
 
-        <!--View 属性-->
+        <!--View-->
         <activity android:name=".toolview.ViewTranslationActivity" />
 
+        <!-- Touch-->
+        <activity android:name=".touch.TouchEventActivity" />
+
+        <!-- Surface -->
         <activity
             android:name=".scroll.RecyclerScrollActivity"
             android:label="@string/app_name"

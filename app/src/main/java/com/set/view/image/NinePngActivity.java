@@ -1,7 +1,7 @@
 package com.set.view.image;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import com.set.view.R;
 
 public class NinePngActivity extends AppCompatActivity {

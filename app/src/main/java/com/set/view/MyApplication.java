@@ -3,7 +3,7 @@ package com.set.view;
 import android.app.Application;
 
 /**
- *
+ * Application
  */
 public class MyApplication extends Application {
     private static MyApplication instance;
