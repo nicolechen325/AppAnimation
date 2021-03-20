@@ -23,7 +23,7 @@ public class SurfaceHolderActivity extends AppCompatActivity implements SurfaceH
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_surface_main);
+        setContentView(R.layout.act_surface_route);
         //初始化PhoneWindow类mTakeSurfaceCallback。
 
         //在ViewRootImpl中的setView方法，willYouTakeTheSurface()方法，返回callback。

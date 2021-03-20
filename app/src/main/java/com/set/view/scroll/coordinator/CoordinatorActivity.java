@@ -45,7 +45,7 @@ public class CoordinatorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_coordinator_layout);
+        setContentView(R.layout.act_scroll_coordinator);
         initFragments();
         initViewPager();
 

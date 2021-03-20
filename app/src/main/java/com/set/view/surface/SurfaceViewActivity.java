@@ -13,7 +13,7 @@ public class SurfaceViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_surfaceview);
+        setContentView(R.layout.act_surfaceview);
     }
 
 

@@ -21,7 +21,7 @@ public class SurfaceRouteActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_surface_main);
+        setContentView(R.layout.act_surface_route);
 
         btn1 = findViewById(R.id.btn_1);
         btn2 = findViewById(R.id.btn_2);
