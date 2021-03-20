@@ -1,4 +1,4 @@
-package com.set.view.widget;
+package com.set.view.anim.loading;
 
 import android.content.Context;
 import android.graphics.Canvas;

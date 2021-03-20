@@ -1,4 +1,4 @@
-package com.set.view.anim.sample;
+package com.set.view.anim.fastflash;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
@@ -52,8 +52,6 @@ public class FasterAnimationsContainer {
     private FasterAnimationsContainer(ImageView imageView) {
         init(imageView);
     }
-
-    ;
 
     private static FasterAnimationsContainer sInstance;
 

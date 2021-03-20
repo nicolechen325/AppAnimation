@@ -1,4 +1,4 @@
-package com.set.view.anim.sample;
+package com.set.view.anim.fastflash;
 
 import android.app.Activity;
 import android.os.Bundle;

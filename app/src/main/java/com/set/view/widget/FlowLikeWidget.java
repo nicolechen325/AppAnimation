@@ -22,7 +22,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-//点赞效果动画
+/**
+ * 点赞效果动画
+ */
 public class FlowLikeWidget extends RelativeLayout {
 
     private List<Drawable> mLikeDrawables; // 图片的集合

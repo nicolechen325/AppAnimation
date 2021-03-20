@@ -22,9 +22,8 @@ import com.set.view.R;
 /**
  * 补间动画-插值器
  */
-public class TweenInterpolatorActivity extends AppCompatActivity implements View.OnClickListener {
+public class AnimInterpolatorActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG_1 = "TweenInterpolatorrActivity";
-
     ImageView imageView1;
     ImageView imageView2;
     ImageView imageView3;
@@ -34,7 +33,6 @@ public class TweenInterpolatorActivity extends AppCompatActivity implements View
     ImageView imageView7;
     ImageView imageView8;
     ImageView imageView9;
-
 
     Animation animation1;
     Animation animation2;
@@ -132,7 +130,6 @@ public class TweenInterpolatorActivity extends AppCompatActivity implements View
         switch (v.getId()) {
             case R.id.img_tween_interpolator_1:
                 break;
-
         }
     }
 }

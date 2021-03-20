@@ -26,7 +26,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public class GenericDrawerLayout extends FrameLayout {
 
-    private static final String TAG = GenericDrawerLayout.class.getSimpleName();
+    private static final String TAG_02 = GenericDrawerLayout.class.getSimpleName();
 
     private enum AnimStatus {
         OPENING, CLOSING, CLOSED, OPENED

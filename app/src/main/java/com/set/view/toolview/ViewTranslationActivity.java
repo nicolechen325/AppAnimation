@@ -1,4 +1,4 @@
-package com.set.view.anim.sample;
+package com.set.view.toolview;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;

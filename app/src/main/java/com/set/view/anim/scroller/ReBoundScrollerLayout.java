@@ -1,4 +1,4 @@
-package com.set.view.widget;
+package com.set.view.anim.scroller;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -10,16 +10,16 @@ import android.widget.Scroller;
 /**
  * 回弹控件
  */
-public class ReBoundLayout extends LinearLayout {
+public class ReBoundScrollerLayout extends LinearLayout {
     private Scroller mScroller;
     private final String TAG = "ReBoundLayout";
     private int mLastMotionY;
 
-    public ReBoundLayout(Context context) {
+    public ReBoundScrollerLayout(Context context) {
         this(context, null);
     }
 
-    public ReBoundLayout(Context context, AttributeSet attrs) {
+    public ReBoundScrollerLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         setClickable(true);
         setLongClickable(true);

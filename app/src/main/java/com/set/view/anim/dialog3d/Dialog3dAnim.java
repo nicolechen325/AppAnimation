@@ -15,7 +15,10 @@ import android.widget.LinearLayout;
 
 import com.set.view.R;
 
-public class Dialog3dAnim extends Dialog implements View.OnClickListener{
+/**
+ * Dialog  3D
+ */
+public class Dialog3dAnim extends Dialog implements View.OnClickListener {
     private Context context;
     LinearLayout llFront;
     LinearLayout dialogContainer;
@@ -47,9 +50,9 @@ public class Dialog3dAnim extends Dialog implements View.OnClickListener{
         LayoutInflater inflater = LayoutInflater.from(context);
         view = inflater.inflate(R.layout.dialog_3d_anim, null);
         setContentView(view);
-        llFront=(LinearLayout)view.findViewById(R.id.ll_front);
-        dialogContainer=(LinearLayout)view.findViewById(R.id.dialog_container);
-        llBack=(LinearLayout)view.findViewById(R.id.ll_back);
+        llFront = (LinearLayout) view.findViewById(R.id.ll_front);
+        dialogContainer = (LinearLayout) view.findViewById(R.id.dialog_container);
+        llBack = (LinearLayout) view.findViewById(R.id.ll_back);
         llFront.setOnClickListener(this);
         llBack.setOnClickListener(this);
         //对话框窗体设置

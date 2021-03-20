@@ -29,16 +29,19 @@
         </activity>
 
         <!--各类动画Activity-->
+
         <activity android:name=".anim.sample.TweenAnimActivity" />
         <activity android:name=".anim.sample.PropertyAnimActivity" />
-        <activity android:name=".anim.sample.ScrollerActivity" />
+        <activity android:name=".anim.scroller.ScrollerActivity" />
         <activity android:name=".anim.explosion.ExplosionActivity" />
         <activity android:name=".anim.loading.LoadingActivity" />
         <activity android:name=".anim.sample.FrameAnimActivity" />
-        <activity android:name=".anim.sample.FasterImageAnimActivity" />
-        <activity android:name=".anim.sample.OpenDoorActivity" />
-        <activity android:name=".anim.sample.TweenInterpolatorActivity" />
-        <activity android:name=".anim.sample.ViewTranslationActivity" />
+        <activity android:name=".anim.fastflash.FasterImageAnimActivity" />
+        <activity android:name=".anim.opendoor.OpenDoorActivity" />
+        <activity android:name=".anim.sample.AnimInterpolatorActivity" />
+        <activity android:name=".anim.dialog3d.Anim3dActivity" />
+
+        <activity android:name=".toolview.ViewTranslationActivity" />
 
         <activity
             android:name=".scroll.RecyclerScrollActivity"
@@ -51,11 +54,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
 
-
         <activity
             android:name=".surface.SurfaceMainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
         <activity android:name=".surface.SurfaceHolderActivity" />
         <activity android:name=".surface.TextureViewActivity" />
