@@ -46,8 +46,9 @@
         <activity android:name=".image.NinePngActivity" />
 
         <!-- Scroll -->
-
         <activity android:name=".scroll.ScrollRouteActivity" />
+        <activity android:name=".scroll.viewtype.RecyclerViewTypeActivity" />
+        <activity android:name=".scroll.scrollview.ScrollViewActivity" />
         <activity
             android:name=".scroll.coordinator.CoordinatorActivity"
             android:theme="@style/AppThemeNoBar" />
@@ -59,11 +60,6 @@
         <activity android:name=".touch.TouchEventActivity" />
 
         <!-- Surface -->
-        <activity
-            android:name=".scroll.RecyclerViewTypeActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".surface.SurfaceRouteActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

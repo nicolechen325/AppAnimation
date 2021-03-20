@@ -6,17 +6,21 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.set.view.RouteItemEntry;
-import com.set.view.scroll.FloorViewType;
+import com.set.view.scroll.viewtype.FloorViewType;
 import com.set.view.R;
-import com.set.view.scroll.entity.Bean;
-import com.set.view.scroll.entity.ItemListEntry;
-import com.set.view.scroll.entity.MoreViewEntry;
+import com.set.view.scroll.entry.Type2Entry;
+import com.set.view.scroll.entry.Type3Entry;
+import com.set.view.scroll.entry.Type4Entry;
+import com.set.view.scroll.entry.Type5Entry;
+import com.set.view.scroll.entry.ItemListEntry;
+import com.set.view.scroll.entry.Type1Entry;
 import com.set.view.scroll.viewholder.BaseRecycleViewHolder;
-import com.set.view.scroll.viewholder.ImageViewHolder;
+import com.set.view.scroll.viewholder.ItemType5Holder;
 import com.set.view.scroll.viewholder.ItemRouteHolder;
-import com.set.view.scroll.viewholder.ItemExpandedHolder;
-import com.set.view.scroll.viewholder.ItemMoreViewHolder;
-import com.set.view.scroll.viewholder.TitleViewHolder;
+import com.set.view.scroll.viewholder.ItemType3Holder;
+import com.set.view.scroll.viewholder.ItemType1Holder;
+import com.set.view.scroll.viewholder.ItemType2Holder;
+import com.set.view.scroll.viewholder.ItemType4Holder;
 
 import java.util.List;
 
@@ -86,20 +90,23 @@ public class AllViewTypeAdapter extends BaseRecyclerAdapter {
      */
     private BaseRecycleViewHolder createCustomViewHolder(ViewGroup parent, int viewType) {
         if (viewType == FloorViewType.ITEM_TYPE_1.ordinal()) {
-            View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_more, parent, false);
-            return new ItemMoreViewHolder(view);
+            View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_type1, parent, false);
+            return new ItemType1Holder(view);
         } else if (viewType == FloorViewType.ITEM_TYPE_2.ordinal()) {
-            View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_txt, parent, false);
-            return new TitleViewHolder(view);
+            View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_type2, parent, false);
+            return new ItemType2Holder(view);
+        } else if (viewType == FloorViewType.ITEM_TYPE_3.ordinal()) {
+            View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_type3, parent, false);
+            return new ItemType3Holder(view);
+        } else if (viewType == FloorViewType.ITEM_TYPE_4.ordinal()) {
+            View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_type4, parent, false);
+            return new ItemType4Holder(view);
+        } else if (viewType == FloorViewType.ITEM_TYPE_5.ordinal()) {
+            View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_type5, parent, false);
+            return new ItemType5Holder(view);
         } else if (viewType == FloorViewType.ITEM_TYPE_ROUTE.ordinal()) {
             View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_route, parent, false);
             return new ItemRouteHolder(view);
-        } else if (viewType == FloorViewType.ITEM_TYPE_4.ordinal()) {
-            View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_expandanim, parent, false);
-            return new ItemExpandedHolder(view);
-        } else if (viewType == FloorViewType.ITEM_TYPE_5.ordinal()) {
-            View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_image, parent, false);
-            return new ImageViewHolder(view);
         } else {
             return null;
         }
@@ -114,17 +121,23 @@ public class AllViewTypeAdapter extends BaseRecyclerAdapter {
     private void bindCustomViewholderData(BaseRecycleViewHolder holder, int position) {
 
         ItemListEntry itemsEntry = mDataList.get(position);
-        if (holder instanceof ItemMoreViewHolder) {
-
-            MoreViewEntry entry = (MoreViewEntry) itemsEntry.data;
+        if (holder instanceof ItemType1Holder) {
+            Type1Entry entry = (Type1Entry) itemsEntry.data;
             holder.setViewHolderData(entry, position, itemsEntry.itemClickListener);
-
+        } else if (holder instanceof ItemType2Holder) {
+            Type2Entry entry = (Type2Entry) itemsEntry.data;
+            holder.setViewHolderData(entry, position, itemsEntry.itemClickListener);
+        } else if (holder instanceof ItemType3Holder) {
+            Type3Entry entry = (Type3Entry) itemsEntry.data;
+            holder.setViewHolderData(entry, position, itemsEntry.itemClickListener);
+        } else if (holder instanceof ItemType4Holder) {
+            Type4Entry entry = (Type4Entry) itemsEntry.data;
+            holder.setViewHolderData(entry, position, itemsEntry.itemClickListener);
+        } else if (holder instanceof ItemType5Holder) {
+            Type5Entry entry = (Type5Entry) itemsEntry.data;
+            holder.setViewHolderData(entry, position, itemsEntry.itemClickListener);
         } else if (holder instanceof ItemRouteHolder) {
             RouteItemEntry entry = (RouteItemEntry) itemsEntry.data;
-            holder.setViewHolderData(entry, position, itemsEntry.itemClickListener);
-        }
-        else if (holder instanceof ImageViewHolder) {
-            Bean entry = (Bean) itemsEntry.data;
             holder.setViewHolderData(entry, position, itemsEntry.itemClickListener);
         }
     }

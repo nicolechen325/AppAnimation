@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.ViewGroup;
 
-import com.set.view.scroll.entity.ItemListEntry;
+import com.set.view.scroll.entry.ItemListEntry;
 import com.set.view.scroll.viewholder.BaseRecycleViewHolder;
 
 import java.util.ArrayList;

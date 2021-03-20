@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/img_icon"
         android:gravity="center"
-        android:text="查看更多"
-        android:textColor="#666666"
+        android:text="详细说明"
+        android:textColor="#353535"
         android:textSize="15sp" />
 </RelativeLayout>

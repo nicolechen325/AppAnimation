@@ -5,22 +5,21 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.set.view.R;
-import com.set.view.scroll.adapter.BaseRecyclerAdapter;
 import com.set.view.scroll.adapter.OnItemClickListener;
-import com.set.view.scroll.entity.TitleEntry;
+import com.set.view.scroll.entry.Type2Entry;
 
-public class TitleViewHolder extends BaseRecycleViewHolder<TitleEntry> implements View.OnClickListener {
+public class ItemType2Holder extends BaseRecycleViewHolder<Type2Entry> implements View.OnClickListener {
     private String TAG = "SubTitleViewHolder";
 
     private TextView item_tag_tv;
 
-    public TitleViewHolder(View itemView) {
+    public ItemType2Holder(View itemView) {
         super(itemView);
-        item_tag_tv = (TextView) itemView.findViewById(R.id.item_tag_tv);
+        item_tag_tv =  itemView.findViewById(R.id.item_tag_tv);
     }
 
     @Override
-    public void setViewHolderData(TitleEntry object, int position, OnItemClickListener itemClickListener) {
+    public void setViewHolderData(Type2Entry object, int position, OnItemClickListener itemClickListener) {
         if (!TextUtils.isEmpty(object.mTitle)) {
             item_tag_tv.setText(object.mTitle);
         }

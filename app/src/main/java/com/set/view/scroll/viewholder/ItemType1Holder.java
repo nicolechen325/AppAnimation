@@ -3,18 +3,18 @@ package com.set.view.scroll.viewholder;
 import android.view.View;
 
 import com.set.view.scroll.adapter.OnItemClickListener;
-import com.set.view.scroll.entity.MoreViewEntry;
+import com.set.view.scroll.entry.Type1Entry;
 
-public class ItemMoreViewHolder extends BaseRecycleViewHolder<MoreViewEntry> implements View.OnClickListener {
-    MoreViewEntry moreViewEntry;
+public class ItemType1Holder extends BaseRecycleViewHolder<Type1Entry> implements View.OnClickListener {
+    Type1Entry moreViewEntry;
 
-    public ItemMoreViewHolder(View itemView) {
+    public ItemType1Holder(View itemView) {
         super(itemView);
         itemView.setOnClickListener(this);
     }
 
     @Override
-    public void setViewHolderData(MoreViewEntry object, int position, OnItemClickListener itemClickListener) {
+    public void setViewHolderData(Type1Entry object, int position, OnItemClickListener itemClickListener) {
         moreViewEntry = object;
     }
 

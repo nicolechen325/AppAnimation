@@ -13,16 +13,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.set.view.R;
-import com.set.view.scroll.adapter.BaseRecyclerAdapter;
 import com.set.view.scroll.adapter.OnItemClickListener;
-import com.set.view.scroll.entity.ExpendItemEntity;
+import com.set.view.scroll.entry.Type4Entry;
 
-public class ItemExpandedHolder extends BaseRecycleViewHolder<ExpendItemEntity> implements View.OnClickListener {
-    ExpendItemEntity entity;
+public class ItemType4Holder extends BaseRecycleViewHolder<Type4Entry> implements View.OnClickListener {
+    Type4Entry entity;
 
     TextView animView;
 
-    public ItemExpandedHolder(View itemView) {
+    public ItemType4Holder(View itemView) {
         super(itemView);
         itemView.setOnClickListener(this);
         animView = itemView.findViewById(R.id.tv_expanded);
@@ -70,7 +69,7 @@ public class ItemExpandedHolder extends BaseRecycleViewHolder<ExpendItemEntity> 
     }
 
     @Override
-    public void setViewHolderData(ExpendItemEntity object, int position, OnItemClickListener itemClickListener) {
+    public void setViewHolderData(Type4Entry object, int position, OnItemClickListener itemClickListener) {
         this.entity = object;
 
 

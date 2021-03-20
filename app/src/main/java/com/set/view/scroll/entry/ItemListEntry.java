@@ -1,6 +1,6 @@
-package com.set.view.scroll.entity;
+package com.set.view.scroll.entry;
 
-import com.set.view.scroll.FloorViewType;
+import com.set.view.scroll.viewtype.FloorViewType;
 import com.set.view.scroll.adapter.OnItemClickListener;
 
 /**
