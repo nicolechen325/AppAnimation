@@ -5,7 +5,7 @@ import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.set.view.scroll.adapter.BaseAdapter;
+import com.set.view.scroll.adapter.OnItemClickListener;
 
 /**
  * @cg
@@ -19,6 +19,5 @@ public abstract class BaseRecycleViewHolder<T> extends RecyclerView.ViewHolder i
         mContext = itemView.getContext();
     }
 
-    public abstract void setViewHolderData(T object, int position, BaseAdapter.OnItemClickListener onItemClickListener);
-
+    public abstract void setViewHolderData(T object, int position, OnItemClickListener onItemClickListener);
 }

@@ -2,9 +2,8 @@ package com.set.view.scroll.viewholder;
 
 import android.view.View;
 
-import com.set.view.scroll.adapter.BaseAdapter;
+import com.set.view.scroll.adapter.OnItemClickListener;
 import com.set.view.scroll.entity.MoreViewEntry;
-
 
 public class ItemMoreViewHolder extends BaseRecycleViewHolder<MoreViewEntry> implements View.OnClickListener {
     MoreViewEntry moreViewEntry;
@@ -15,13 +14,12 @@ public class ItemMoreViewHolder extends BaseRecycleViewHolder<MoreViewEntry> imp
     }
 
     @Override
-    public void setViewHolderData(MoreViewEntry object, int position, BaseAdapter.OnItemClickListener itemClickListener) {
+    public void setViewHolderData(MoreViewEntry object, int position, OnItemClickListener itemClickListener) {
         moreViewEntry = object;
     }
 
     @Override
     public void onClick(View v) {
-
         if (moreViewEntry.moreClickListener != null) {
             moreViewEntry.moreClickListener.onMoreClick(null);
         }

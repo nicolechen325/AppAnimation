@@ -13,7 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.set.view.R;
-import com.set.view.scroll.adapter.BaseAdapter;
+import com.set.view.scroll.adapter.BaseRecyclerAdapter;
+import com.set.view.scroll.adapter.OnItemClickListener;
 import com.set.view.scroll.entity.ExpendItemEntity;
 
 public class ItemExpandedHolder extends BaseRecycleViewHolder<ExpendItemEntity> implements View.OnClickListener {
@@ -69,7 +70,7 @@ public class ItemExpandedHolder extends BaseRecycleViewHolder<ExpendItemEntity> 
     }
 
     @Override
-    public void setViewHolderData(ExpendItemEntity object, int position, BaseAdapter.OnItemClickListener itemClickListener) {
+    public void setViewHolderData(ExpendItemEntity object, int position, OnItemClickListener itemClickListener) {
         this.entity = object;
 
 

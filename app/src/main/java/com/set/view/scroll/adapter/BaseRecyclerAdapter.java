@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.ViewGroup;
 
-import com.set.view.scroll.entity.ItemEntry;
+import com.set.view.scroll.entity.ItemListEntry;
 import com.set.view.scroll.viewholder.BaseRecycleViewHolder;
 
 import java.util.ArrayList;
@@ -15,11 +15,7 @@ import java.util.List;
 /**
  * RecyclerView Adapter
  */
-public class BaseAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder> {
-    public interface OnItemClickListener {
-        void onClick(int position);
-    }
-
+public class BaseRecyclerAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder> {
     private OnItemClickListener listener;
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -27,10 +23,10 @@ public class BaseAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder> {
     }
 
     protected Context mContext;
-    protected List<ItemEntry> mDataList = new ArrayList<>();
+    protected List<ItemListEntry> mDataList = new ArrayList<>();
     protected int mDataTotal;
 
-    public BaseAdapter(Context context, List<ItemEntry> dataList) {
+    public BaseRecyclerAdapter(Context context, List<ItemListEntry> dataList) {
         mContext = context;
         mDataList = dataList;
         mDataTotal = 0;
@@ -70,7 +66,7 @@ public class BaseAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder> {
      *
      * @param data
      */
-    public void addData(ItemEntry data) {
+    public void addData(ItemListEntry data) {
         if (mDataList == null) {
             return;
         }

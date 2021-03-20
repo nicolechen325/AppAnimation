@@ -5,7 +5,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.set.view.R;
-import com.set.view.scroll.adapter.BaseAdapter;
+import com.set.view.scroll.adapter.BaseRecyclerAdapter;
+import com.set.view.scroll.adapter.OnItemClickListener;
 import com.set.view.scroll.entity.TitleEntry;
 
 public class TitleViewHolder extends BaseRecycleViewHolder<TitleEntry> implements View.OnClickListener {
@@ -19,7 +20,7 @@ public class TitleViewHolder extends BaseRecycleViewHolder<TitleEntry> implement
     }
 
     @Override
-    public void setViewHolderData(TitleEntry object, int position, BaseAdapter.OnItemClickListener itemClickListener) {
+    public void setViewHolderData(TitleEntry object, int position, OnItemClickListener itemClickListener) {
         if (!TextUtils.isEmpty(object.mTitle)) {
             item_tag_tv.setText(object.mTitle);
         }

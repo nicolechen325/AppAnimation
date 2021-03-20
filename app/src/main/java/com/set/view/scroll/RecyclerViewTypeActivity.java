@@ -10,31 +10,30 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.set.view.R;
-import com.set.view.scroll.adapter.BaseAdapter;
-import com.set.view.scroll.adapter.BuAdapter;
+import com.set.view.scroll.adapter.AllViewTypeAdapter;
+import com.set.view.scroll.adapter.OnItemClickListener;
 import com.set.view.scroll.entity.Bean;
-import com.set.view.scroll.entity.ItemEntry;
+import com.set.view.scroll.entity.ItemListEntry;
 import com.set.view.scroll.entity.MoreViewEntry;
-import com.set.view.scroll.entity.Type3Entity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * demo
+ *
  */
-public class RecyclerScrollActivity extends AppCompatActivity {
-    private List<ItemEntry> mTopDataList = new ArrayList<>();
-    private List<ItemEntry> mDataList = new ArrayList<>();
+public class RecyclerViewTypeActivity extends AppCompatActivity {
+    private List<ItemListEntry> mTopDataList = new ArrayList<>();
+    private List<ItemListEntry> mDataList = new ArrayList<>();
     private RecyclerView mTopRecyclerView;
     private RecyclerView mRecyclerView;
-    BuAdapter buAdapter;
-    BuAdapter topAdapter;
+    AllViewTypeAdapter buAdapter;
+    AllViewTypeAdapter topAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycler_scrolling);
+        setContentView(R.layout.act_recycler_viewtype_scroll);
 
         mTopRecyclerView = findViewById(R.id.recyclerview_top);
         mRecyclerView = findViewById(R.id.recyclerview);
@@ -51,48 +50,45 @@ public class RecyclerScrollActivity extends AppCompatActivity {
 
     private void initData() {
         //top
-        ItemEntry<MoreViewEntry> itemsEntry = new ItemEntry();
+        ItemListEntry<MoreViewEntry> itemsEntry = new ItemListEntry();
         itemsEntry.data = new MoreViewEntry();
-        itemsEntry.floorType = FloorType.ITEM_TYPE_1;
+        itemsEntry.floorType = FloorViewType.ITEM_TYPE_1;
         mTopDataList.add(itemsEntry);
 
-        ItemEntry<Bean> itemsEntry2 = new ItemEntry();
+        ItemListEntry<Bean> itemsEntry2 = new ItemListEntry();
         itemsEntry2.data = new Bean();
-        itemsEntry2.floorType = FloorType.ITEM_TYPE_2;
+        itemsEntry2.floorType = FloorViewType.ITEM_TYPE_2;
         mTopDataList.add(itemsEntry2);
 
-        ItemEntry<Type3Entity> itemsEntry3 = new ItemEntry();
-        itemsEntry3.data = new Type3Entity("item");
-        itemsEntry3.floorType = FloorType.ITEM_TYPE_3;
+        ItemListEntry<Bean> itemsEntry3 = new ItemListEntry();
+        itemsEntry3.data = new Bean();
+        itemsEntry3.floorType = FloorViewType.ITEM_TYPE_5;
         mTopDataList.add(itemsEntry3);
 
-        topAdapter = new BuAdapter(this, mTopDataList);
+        topAdapter = new AllViewTypeAdapter(this, mTopDataList);
         mTopRecyclerView.setAdapter(topAdapter);
 
         //content
         for (int i = 0; i < 10; i++) {
-            ItemEntry<Type3Entity> itemsEntry0 = new ItemEntry();
-            itemsEntry0.data = new Type3Entity("item" + i);
-            itemsEntry0.itemClickListener = new BaseAdapter.OnItemClickListener() {
+            ItemListEntry<Bean> itemsEntry0 = new ItemListEntry();
+            itemsEntry0.data = new Bean();
+            itemsEntry0.itemClickListener = new OnItemClickListener() {
                 @Override
                 public void onClick(int position) {
-                    Toast.makeText(RecyclerScrollActivity.this, "position:" + position, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RecyclerViewTypeActivity.this, "position:" + position, Toast.LENGTH_SHORT).show();
                 }
 
             };
-            itemsEntry0.floorType = FloorType.ITEM_TYPE_3;
+            itemsEntry0.floorType = FloorViewType.ITEM_TYPE_5;
             mDataList.add(itemsEntry0);
         }
 
-        buAdapter = new BuAdapter(this, mDataList);
+        buAdapter = new AllViewTypeAdapter(this, mDataList);
         mRecyclerView.setAdapter(buAdapter);
 
-
-        buAdapter.setOnItemClickListener(new BuAdapter.OnItemClickListener() {
+        buAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onClick(int position) {
-
-
             }
         });
     }

@@ -1,7 +1,7 @@
 package com.set.view.image;
 
 import com.set.view.BaseGridViewActivity;
-import com.set.view.EntryItem;
+import com.set.view.RouteItemEntry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +12,11 @@ import java.util.List;
 public class ImageRouteActivity extends BaseGridViewActivity {
 
     @Override
-    public List<EntryItem> initItemData() {
-        List<EntryItem> list = new ArrayList<>();
+    public List<RouteItemEntry> initItemData() {
+        List<RouteItemEntry> list = new ArrayList<>();
 
-        list.add(new EntryItem(0, "Image Scale", ImageScaleActivity.class));
-        list.add(new EntryItem(1, "NinePng", NinePngActivity.class));
+        list.add(new RouteItemEntry(0, "Image Scale", ImageScaleActivity.class));
+        list.add(new RouteItemEntry(1, "NinePng", NinePngActivity.class));
         return list;
     }
 

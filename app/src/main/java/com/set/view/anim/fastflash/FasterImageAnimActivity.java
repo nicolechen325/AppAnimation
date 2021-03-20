@@ -23,7 +23,7 @@ public class FasterImageAnimActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_anim_faster_flash);
-        ImageView imageView = findViewById(R.id.imageview);
+        ImageView imageView = findViewById(R.id.img_faster_flash);
         mFasterAnimationsContainer = FasterAnimationsContainer
                 .getInstance(imageView);
         mFasterAnimationsContainer.addAllFrames(IMAGE_RESOURCES,

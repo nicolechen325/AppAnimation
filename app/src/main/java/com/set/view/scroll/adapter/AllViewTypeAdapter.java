@@ -5,14 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.set.view.scroll.FloorType;
+import com.set.view.RouteItemEntry;
+import com.set.view.scroll.FloorViewType;
 import com.set.view.R;
-import com.set.view.scroll.entity.ItemEntry;
+import com.set.view.scroll.entity.Bean;
+import com.set.view.scroll.entity.ItemListEntry;
 import com.set.view.scroll.entity.MoreViewEntry;
-import com.set.view.scroll.entity.Type3Entity;
 import com.set.view.scroll.viewholder.BaseRecycleViewHolder;
 import com.set.view.scroll.viewholder.ImageViewHolder;
-import com.set.view.scroll.viewholder.Item3Holder;
+import com.set.view.scroll.viewholder.ItemRouteHolder;
 import com.set.view.scroll.viewholder.ItemExpandedHolder;
 import com.set.view.scroll.viewholder.ItemMoreViewHolder;
 import com.set.view.scroll.viewholder.TitleViewHolder;
@@ -22,9 +23,9 @@ import java.util.List;
 /**
  * @cg
  */
-public class BuAdapter extends BaseAdapter {
+public class AllViewTypeAdapter extends BaseRecyclerAdapter {
 
-    public BuAdapter(Context context, List<ItemEntry> dataList) {
+    public AllViewTypeAdapter(Context context, List<ItemListEntry> dataList) {
         super(context, dataList);
     }
 
@@ -46,7 +47,7 @@ public class BuAdapter extends BaseAdapter {
 
 
     @Override
-    public void addData(ItemEntry data) {
+    public void addData(ItemListEntry data) {
         super.addData(data);
         mDataList.add(data);
         notifyItemInserted(mDataList.size());
@@ -64,7 +65,7 @@ public class BuAdapter extends BaseAdapter {
      * @param data
      * @param index
      */
-    public void updateData(ItemEntry data, int index) {
+    public void updateData(ItemListEntry data, int index) {
         if (mDataList != null) {
             if (mDataList.size() != 0 && mDataList.get(index).floorType.ordinal() == data.floorType.ordinal()) {
                 mDataList.set(index, data);
@@ -84,19 +85,19 @@ public class BuAdapter extends BaseAdapter {
      * @return
      */
     private BaseRecycleViewHolder createCustomViewHolder(ViewGroup parent, int viewType) {
-        if (viewType == FloorType.ITEM_TYPE_1.ordinal()) {
+        if (viewType == FloorViewType.ITEM_TYPE_1.ordinal()) {
             View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_more, parent, false);
             return new ItemMoreViewHolder(view);
-        } else if (viewType == FloorType.ITEM_TYPE_2.ordinal()) {
+        } else if (viewType == FloorViewType.ITEM_TYPE_2.ordinal()) {
             View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_txt, parent, false);
             return new TitleViewHolder(view);
-        } else if (viewType == FloorType.ITEM_TYPE_3.ordinal()) {
-            View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_type3, parent, false);
-            return new Item3Holder(view);
-        } else if (viewType == FloorType.ITEM_TYPE_4.ordinal()) {
+        } else if (viewType == FloorViewType.ITEM_TYPE_ROUTE.ordinal()) {
+            View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_route, parent, false);
+            return new ItemRouteHolder(view);
+        } else if (viewType == FloorViewType.ITEM_TYPE_4.ordinal()) {
             View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_expandanim, parent, false);
             return new ItemExpandedHolder(view);
-        } else if (viewType == FloorType.ITEM_TYPE_5.ordinal()) {
+        } else if (viewType == FloorViewType.ITEM_TYPE_5.ordinal()) {
             View view = LayoutInflater.from(mContext).inflate(R.layout.view_item_image, parent, false);
             return new ImageViewHolder(view);
         } else {
@@ -112,15 +113,19 @@ public class BuAdapter extends BaseAdapter {
      */
     private void bindCustomViewholderData(BaseRecycleViewHolder holder, int position) {
 
-        ItemEntry itemsEntry = mDataList.get(position);
+        ItemListEntry itemsEntry = mDataList.get(position);
         if (holder instanceof ItemMoreViewHolder) {
 
             MoreViewEntry entry = (MoreViewEntry) itemsEntry.data;
-            holder.setViewHolderData(entry, position,itemsEntry.itemClickListener);
+            holder.setViewHolderData(entry, position, itemsEntry.itemClickListener);
 
-        } else if (holder instanceof Item3Holder) {
-            Type3Entity entry = (Type3Entity) itemsEntry.data;
-            holder.setViewHolderData(entry, position,itemsEntry.itemClickListener);
+        } else if (holder instanceof ItemRouteHolder) {
+            RouteItemEntry entry = (RouteItemEntry) itemsEntry.data;
+            holder.setViewHolderData(entry, position, itemsEntry.itemClickListener);
+        }
+        else if (holder instanceof ImageViewHolder) {
+            Bean entry = (Bean) itemsEntry.data;
+            holder.setViewHolderData(entry, position, itemsEntry.itemClickListener);
         }
     }
 }

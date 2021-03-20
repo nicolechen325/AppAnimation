@@ -45,10 +45,10 @@ public class CoordinatorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_coordinator_layout);
+        setContentView(R.layout.act_coordinator_layout);
         initFragments();
         initViewPager();
-        
+
         mImageArray = new int[]{
                 R.drawable.bg_tab_header_1,
                 R.drawable.bg_tab_header_2,
@@ -66,7 +66,7 @@ public class CoordinatorActivity extends AppCompatActivity {
         mActionbar = getSupportActionBar();
         mCollapsingToolbarLayout = findViewById(R.id.collapsingtoolbarlayout);
         mTabLayout = findViewById(R.id.tabLayout);
-        mImageView = findViewById(R.id.imageview);
+        mImageView = findViewById(R.id.img_header_view);
 
         mCollapsingToolbarLayout.setContentScrimColor(ContextCompat.getColor(
                 CoordinatorActivity.this, R.color.colorPrimary));
@@ -92,7 +92,7 @@ public class CoordinatorActivity extends AppCompatActivity {
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                mImageView.startAnimation(AnimationUtils.loadAnimation(CoordinatorActivity.this, R.anim.anim_dismiss));
+                mImageView.startAnimation(AnimationUtils.loadAnimation(CoordinatorActivity.this, R.anim.anim_coordinator_header_dismiss));
                 if (mImageArray != null) {
                     mImageView.setImageResource(mImageArray[tab.getPosition()]);
                 }
@@ -101,7 +101,7 @@ public class CoordinatorActivity extends AppCompatActivity {
                             ContextCompat.getColor(
                                     CoordinatorActivity.this, mColorArray[tab.getPosition()]));
                 }
-                mImageView.setAnimation(AnimationUtils.loadAnimation(CoordinatorActivity.this, R.anim.anim_show));
+                mImageView.setAnimation(AnimationUtils.loadAnimation(CoordinatorActivity.this, R.anim.anim_coordinator_header_show));
             }
 
             @Override

@@ -46,6 +46,8 @@
         <activity android:name=".image.NinePngActivity" />
 
         <!-- Scroll -->
+
+        <activity android:name=".scroll.ScrollRouteActivity" />
         <activity
             android:name=".scroll.coordinator.CoordinatorActivity"
             android:theme="@style/AppThemeNoBar" />
@@ -58,7 +60,7 @@
 
         <!-- Surface -->
         <activity
-            android:name=".scroll.RecyclerScrollActivity"
+            android:name=".scroll.RecyclerViewTypeActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
 
