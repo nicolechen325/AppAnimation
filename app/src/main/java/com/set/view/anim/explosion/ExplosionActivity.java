@@ -1,7 +1,7 @@
 package com.set.view.anim.explosion;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,14 +11,14 @@ import com.set.view.R;
 
 //ExplosionField是透明的，MATCH_PARENT覆盖在主视图上
 //Clickable
-public class ExplosionActivity extends Activity {
+public class ExplosionActivity extends AppCompatActivity {
 
     private ExplosionField mExplosionField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_explosion);
+        setContentView(R.layout.act_anim_explosion);
         mExplosionField = ExplosionField.attach2Window(this);
         addListener(findViewById(R.id.root));
     }

@@ -10,10 +10,9 @@ import com.set.view.R;
 import com.set.view.surface.video.TextureVideoActivity;
 
 /**
- *
+ * Surface  View
  */
-public class SurfaceMainActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class SurfaceRouteActivity extends AppCompatActivity implements View.OnClickListener {
     Button btn1;
     Button btn2;
     Button btn3;
@@ -41,15 +40,15 @@ public class SurfaceMainActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_1) {
-            startActivity(new Intent(SurfaceMainActivity.this, SurfaceHolderActivity.class));
+            startActivity(new Intent(SurfaceRouteActivity.this, SurfaceHolderActivity.class));
         } else if (v.getId() == R.id.btn_2) {
-            startActivity(new Intent(SurfaceMainActivity.this, TextureViewActivity.class));
+            startActivity(new Intent(SurfaceRouteActivity.this, TextureViewActivity.class));
 
         } else if (v.getId() == R.id.btn_3) {
-            startActivity(new Intent(SurfaceMainActivity.this, SurfaceViewActivity.class));
+            startActivity(new Intent(SurfaceRouteActivity.this, SurfaceViewActivity.class));
 
         } else if (v.getId() == R.id.btn_4) {
-            startActivity(new Intent(SurfaceMainActivity.this, TextureVideoActivity.class));
+            startActivity(new Intent(SurfaceRouteActivity.this, TextureVideoActivity.class));
 
         }
     }

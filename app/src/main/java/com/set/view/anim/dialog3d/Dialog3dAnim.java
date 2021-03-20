@@ -48,7 +48,7 @@ public class Dialog3dAnim extends Dialog implements View.OnClickListener {
 
     public void init() {
         LayoutInflater inflater = LayoutInflater.from(context);
-        view = inflater.inflate(R.layout.dialog_3d_anim, null);
+        view = inflater.inflate(R.layout.view_anim_dialog_3d, null);
         setContentView(view);
         llFront = (LinearLayout) view.findViewById(R.id.ll_front);
         dialogContainer = (LinearLayout) view.findViewById(R.id.dialog_container);

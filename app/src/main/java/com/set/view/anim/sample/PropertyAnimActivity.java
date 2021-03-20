@@ -7,9 +7,9 @@ import android.animation.PropertyValuesHolder;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.graphics.PointF;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
@@ -20,7 +20,7 @@ import com.set.view.R;
 /**
  * 属性动画
  */
-public class PropertyAnimActivity extends Activity implements View.OnClickListener {
+public class PropertyAnimActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG_2 = "PropertyAnimActivity";
 
     TextView mTvAnimWidget;
@@ -29,7 +29,7 @@ public class PropertyAnimActivity extends Activity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_pro_anim_sample);
+        setContentView(R.layout.act_anim_property_sample);
         mTvAnimWidget = findViewById(R.id.id_ball);
         mTvLog = findViewById(R.id.id_log);
 

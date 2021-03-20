@@ -2,6 +2,8 @@ package com.set.view.surface.video;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
 import com.set.view.R;
 
 
@@ -9,7 +11,7 @@ import com.set.view.R;
  * TextureView+Mediaplayer 播放
  */
 
-public class TextureVideoActivity extends Activity {
+public class TextureVideoActivity extends AppCompatActivity {
     private VideoPlayer mVideoPlayer;
     private VideoController controllerUI;
 

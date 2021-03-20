@@ -16,7 +16,7 @@ public class ViewTranslationActivity extends AppCompatActivity implements View.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_translation_view);
+        setContentView(R.layout.act_view_translation);
         initView();
     }
 

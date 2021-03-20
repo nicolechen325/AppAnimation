@@ -1,4 +1,4 @@
-package com.set.view.anim;
+package com.set.view.anim.xanim;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -1,19 +1,19 @@
 package com.set.view.anim.loading;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 import com.set.view.R;
 
-public class LoadingActivity extends Activity implements View.OnClickListener {
+public class LoadingActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_loading_view);
+        setContentView(R.layout.act_anim_loading_view);
 
         TextView loading2 = findViewById(R.id.tv_loading2);
         loading2.setOnClickListener(this);

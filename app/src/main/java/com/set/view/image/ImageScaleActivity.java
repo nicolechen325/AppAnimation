@@ -17,7 +17,7 @@ public class ImageScaleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_image_scale);
+        setContentView(R.layout.act_image_scale);
 
         final ImageView mImageOriginal = findViewById(R.id.image_original);
         final TextView mTvOriginal = findViewById(R.id.original);

@@ -1,7 +1,7 @@
 package com.set.view.anim.fastflash;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.set.view.R;
@@ -9,7 +9,7 @@ import com.set.view.R;
 /**
  * 帧动画
  */
-public class FasterImageAnimActivity extends Activity {
+public class FasterImageAnimActivity extends AppCompatActivity {
 
     FasterAnimationsContainer mFasterAnimationsContainer;
     private static final int[] IMAGE_RESOURCES = {R.drawable.anim_0, R.drawable.anim_1,
@@ -22,7 +22,7 @@ public class FasterImageAnimActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_faster_image_anim);
+        setContentView(R.layout.act_anim_faster_flash);
         ImageView imageView = findViewById(R.id.imageview);
         mFasterAnimationsContainer = FasterAnimationsContainer
                 .getInstance(imageView);

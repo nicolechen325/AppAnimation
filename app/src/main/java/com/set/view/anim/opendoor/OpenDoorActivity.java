@@ -1,7 +1,7 @@
 package com.set.view.anim.opendoor;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
 import com.set.view.R;
@@ -9,13 +9,13 @@ import com.set.view.R;
 /**
  * 开门动画
  */
-public class OpenDoorActivity extends Activity implements PullDoorView.PullDoorCallBack {
+public class OpenDoorActivity extends AppCompatActivity implements PullDoorView.PullDoorCallBack {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_open_door);
+        setContentView(R.layout.act_anim_open_door);
         PullDoorView pullDoorView = findViewById(R.id.pull_door_view);
         pullDoorView.setmCallback(this);
     }

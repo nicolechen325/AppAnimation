@@ -4,10 +4,8 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -20,7 +18,7 @@
         android:theme="@style/AppTheme">
 
         <!--动画主页-->
-        <activity android:name="com.set.view.MainViewActivity">
+        <activity android:name="com.set.view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,32 +28,33 @@
 
         <!--各类动画Activity-->
 
+        <activity android:name=".anim.AnimRouteActivity" />
         <activity android:name=".anim.sample.TweenAnimActivity" />
         <activity android:name=".anim.sample.PropertyAnimActivity" />
-        <activity android:name=".anim.scroller.ScrollerActivity" />
-        <activity android:name=".anim.explosion.ExplosionActivity" />
-        <activity android:name=".anim.loading.LoadingActivity" />
         <activity android:name=".anim.sample.FrameAnimActivity" />
-        <activity android:name=".anim.fastflash.FasterImageAnimActivity" />
-        <activity android:name=".anim.opendoor.OpenDoorActivity" />
         <activity android:name=".anim.sample.AnimInterpolatorActivity" />
         <activity android:name=".anim.dialog3d.Anim3dActivity" />
+        <activity android:name=".anim.explosion.ExplosionActivity" />
+        <activity android:name=".anim.fastflash.FasterImageAnimActivity" />
+        <activity android:name=".anim.loading.LoadingActivity" />
+        <activity android:name=".anim.opendoor.OpenDoorActivity" />
+        <activity android:name=".anim.scroller.ScrollerActivity" />
 
+        <!--Image -->
+        <activity android:name=".image.ImageRouteActivity" />
+        <activity android:name=".image.ImageScaleActivity" />
+        <activity android:name=".image.NinePngActivity" />
+
+        <!--View 属性-->
         <activity android:name=".toolview.ViewTranslationActivity" />
 
         <activity
             android:name=".scroll.RecyclerScrollActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".image.ImageScaleActivity" />
-        <activity android:name=".image.ImageViewActivity" />
-        <activity
-            android:name=".image.NinePngActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
 
         <activity
-            android:name=".surface.SurfaceMainActivity"
+            android:name=".surface.SurfaceRouteActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
 

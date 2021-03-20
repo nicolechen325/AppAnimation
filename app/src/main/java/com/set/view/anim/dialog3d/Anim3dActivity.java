@@ -18,7 +18,7 @@ public class Anim3dActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_3d_anim_sample);
+        setContentView(R.layout.act_anim_3d_sample);
         initView();
     }
 

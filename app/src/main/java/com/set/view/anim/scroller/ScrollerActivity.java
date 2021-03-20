@@ -1,7 +1,7 @@
 package com.set.view.anim.scroller;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -12,7 +12,7 @@ import com.set.view.R;
 /**
  * 执行scrollTo的View视图内容就会滚动，而不是他本很滚动。
  */
-public class ScrollerActivity extends Activity implements View.OnClickListener {
+public class ScrollerActivity extends AppCompatActivity implements View.OnClickListener {
     //TextView内容滚动
     TextView tvScrollInside;
     //LinearLayout内部存在一个TextView
@@ -21,7 +21,7 @@ public class ScrollerActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_scroller);
+        setContentView(R.layout.act_anim_scroller);
         initView();
     }
 

@@ -36,7 +36,7 @@ public class EventActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_motion_event);
+        setContentView(R.layout.act_touch_motion_event);
         initView();
         mTv1.setOnClickListener(new View.OnClickListener() {
             @Override

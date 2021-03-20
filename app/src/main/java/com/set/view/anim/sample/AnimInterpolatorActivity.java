@@ -47,7 +47,7 @@ public class AnimInterpolatorActivity extends AppCompatActivity implements View.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_tween_interpolator_sample);
+        setContentView(R.layout.act_anim_interpolator_sample);
         initView();
         loadAnimation();
         startAnimation();
