@@ -1,10 +1,10 @@
 package com.set.view.anim;
 
-import com.set.view.BaseGridViewActivity;
+import com.set.view.BaseGridActivity;
 import com.set.view.RouteItemEntry;
 import com.set.view.anim.dialog3d.Anim3dActivity;
 import com.set.view.anim.explosion.ExplosionActivity;
-import com.set.view.anim.fastflash.FasterImageAnimActivity;
+import com.set.view.anim.fastflash.FasterImageFlashActivity;
 import com.set.view.anim.loading.LoadingActivity;
 import com.set.view.anim.opendoor.OpenDoorActivity;
 import com.set.view.anim.sample.AnimInterpolatorActivity;
@@ -16,9 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 动画入口
+ * 动画
  */
-public class AnimRouteActivity extends BaseGridViewActivity {
+public class AnimRouteActivity extends BaseGridActivity {
 
     @Override
     public List<RouteItemEntry> initItemData() {
@@ -29,7 +29,7 @@ public class AnimRouteActivity extends BaseGridViewActivity {
         list.add(new RouteItemEntry(2, "帧动画", FrameAnimActivity.class));
         list.add(new RouteItemEntry(3, "插值器", AnimInterpolatorActivity.class));
         list.add(new RouteItemEntry(4, "Scroller弹性", ScrollerActivity.class));
-        list.add(new RouteItemEntry(5, "图片快速Flash", FasterImageAnimActivity.class));
+        list.add(new RouteItemEntry(5, "图片快速Flash", FasterImageFlashActivity.class));
         list.add(new RouteItemEntry(6, "开门动画", OpenDoorActivity.class));
         list.add(new RouteItemEntry(7, "爆炸效果", ExplosionActivity.class));
         list.add(new RouteItemEntry(8, "Loading", LoadingActivity.class));

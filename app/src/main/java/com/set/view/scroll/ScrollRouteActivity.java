@@ -1,6 +1,6 @@
 package com.set.view.scroll;
 
-import com.set.view.BaseGridViewActivity;
+import com.set.view.BaseGridActivity;
 import com.set.view.RouteItemEntry;
 import com.set.view.scroll.coordinator.CoordinatorActivity;
 import com.set.view.scroll.scrollview.ScrollViewActivity;
@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Scroll
  */
-public class ScrollRouteActivity extends BaseGridViewActivity {
+public class ScrollRouteActivity extends BaseGridActivity {
 
     @Override
     public List<RouteItemEntry> initItemData() {

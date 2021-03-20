@@ -1,6 +1,6 @@
 package com.set.view.image;
 
-import com.set.view.BaseGridViewActivity;
+import com.set.view.BaseGridActivity;
 import com.set.view.RouteItemEntry;
 
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Image入口
  */
-public class ImageRouteActivity extends BaseGridViewActivity {
+public class ImageRouteActivity extends BaseGridActivity {
 
     @Override
     public List<RouteItemEntry> initItemData() {

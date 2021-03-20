@@ -35,7 +35,7 @@
         <activity android:name=".anim.sample.AnimInterpolatorActivity" />
         <activity android:name=".anim.dialog3d.Anim3dActivity" />
         <activity android:name=".anim.explosion.ExplosionActivity" />
-        <activity android:name=".anim.fastflash.FasterImageAnimActivity" />
+        <activity android:name=".anim.fastflash.FasterImageFlashActivity" />
         <activity android:name=".anim.loading.LoadingActivity" />
         <activity android:name=".anim.opendoor.OpenDoorActivity" />
         <activity android:name=".anim.scroller.ScrollerActivity" />

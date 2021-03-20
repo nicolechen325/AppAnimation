@@ -140,12 +140,10 @@ public class Dialog3dAnim extends Dialog implements View.OnClickListener {
 
             @Override
             public void onAnimationStart(Animation animation) {
-
             }
 
             @Override
             public void onAnimationRepeat(Animation animation) {
-
             }
 
             @Override

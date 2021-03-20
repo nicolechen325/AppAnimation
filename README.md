@@ -1,5 +1,5 @@
 Android View 工程
-动画，视图，原理，视频
+动画，图片，视图，滚动，触屏，视频，原理
 
 #### 动画
 ObjectAnimator 动画的执行类 ValueAnimator 动画的执行类 AnimatorSet
@@ -11,13 +11,7 @@ Interpolator接口控制动画变化的速度 包括匀速 加速减速 抛物�
 
 [补间动画原理](https://www.jianshu.com/p/62aab211a606)
 
-scrollUI
-
-
-# ImageView
-ImageView相关属性解析
-
-简书地址
+#### ImageView
 ImageView的ScaleType
 https://www.jianshu.com/p/64790fce98e2
 

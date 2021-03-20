@@ -1,7 +1,9 @@
 package com.set.view.anim.explosion;
 
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -9,8 +11,10 @@ import android.view.ViewGroup;
 
 import com.set.view.R;
 
-//ExplosionField是透明的，MATCH_PARENT覆盖在主视图上
-//Clickable
+/**
+ * ExplosionField是透明的，MATCH_PARENT覆盖在主视图上
+ * Clickable
+ */
 public class ExplosionActivity extends AppCompatActivity {
 
     private ExplosionField mExplosionField;
@@ -40,24 +44,6 @@ public class ExplosionActivity extends AppCompatActivity {
                 }
             });
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.explosion_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-//        if (item.getItemId() == R.id.action_reset) {
-//            View root = findViewById(R.id.root);
-//            reset(root);
-//            addListener(root);
-//            mExplosionField.clear();
-//            return true;
-//        }
-        return super.onOptionsItemSelected(item);
     }
 
     private void reset(View root) {

@@ -17,11 +17,11 @@ import java.util.List;
 /**
  * 主页
  */
-public abstract class BaseGridViewActivity extends AppCompatActivity {
+public abstract class BaseGridActivity extends AppCompatActivity {
     private List<ItemListEntry> mDataList = new ArrayList<>();
     private RecyclerView mRecyclerView;
     private AllViewTypeAdapter mainAdapter;
-    protected List<RouteItemEntry> mBaseItemMap = new ArrayList();
+    protected List<RouteItemEntry> routeItemEntries = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +31,10 @@ public abstract class BaseGridViewActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.main_base_recyclerview);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
         mRecyclerView.setLayoutManager(gridLayoutManager);
-        mBaseItemMap.addAll(initItemData());
+        routeItemEntries.addAll(initItemData());
 
-        for (int m = 0; m < mBaseItemMap.size(); m++) {
-            RouteItemEntry entry = mBaseItemMap.get(m);
+        for (int m = 0; m < routeItemEntries.size(); m++) {
+            RouteItemEntry entry = routeItemEntries.get(m);
 
             ItemListEntry<RouteItemEntry> itemListEntry = new ItemListEntry();
             itemListEntry.data = entry;
@@ -55,13 +55,13 @@ public abstract class BaseGridViewActivity extends AppCompatActivity {
     public abstract List<RouteItemEntry> initItemData();
 
     void onItemClick(int position) {
-        RouteItemEntry item = mBaseItemMap.get(position);
+        RouteItemEntry item = routeItemEntries.get(position);
         Class toClass = item.mClass;
         toActivity(toClass);
     }
 
     void toActivity(Class<?> cls) {
-        Intent intent = new Intent(BaseGridViewActivity.this, cls);
+        Intent intent = new Intent(BaseGridActivity.this, cls);
         startActivity(intent);
     }
 }

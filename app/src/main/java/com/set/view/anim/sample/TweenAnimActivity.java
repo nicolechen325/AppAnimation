@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-import com.set.view.widget.DrawAnimationTextView;
+import com.set.view.anim.xanim.DrawAnimationTextView;
 import com.set.view.R;
 
 /**

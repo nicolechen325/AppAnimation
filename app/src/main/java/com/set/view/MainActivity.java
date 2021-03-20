@@ -13,12 +13,12 @@ import java.util.List;
 /**
  * 首页
  */
-public class MainActivity extends BaseGridViewActivity {
+public class MainActivity extends BaseGridActivity {
 
     @Override
     public List<RouteItemEntry> initItemData() {
         List<RouteItemEntry> list = new ArrayList<>();
-        list.add(new RouteItemEntry(0, R.drawable.icon_item, "动画", AnimRouteActivity.class));
+        list.add(new RouteItemEntry(0, R.drawable.icon_item, "Animation", AnimRouteActivity.class));
         list.add(new RouteItemEntry(1, R.drawable.icon_item, "Image", ImageRouteActivity.class));
         list.add(new RouteItemEntry(2, R.drawable.icon_item, "Scroll", ScrollRouteActivity.class));
         list.add(new RouteItemEntry(3, R.drawable.icon_item, "View", ViewTranslationActivity.class));

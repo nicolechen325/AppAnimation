@@ -17,7 +17,7 @@ import java.util.ArrayList;
 /**
  * 每隔 interval 更换一次 imageview 图片
  */
-public class FasterAnimationsContainer {
+public class FasterAnimContainer {
     private class AnimationFrame {
         private int mResourceId;
         private int mDuration;
@@ -49,15 +49,15 @@ public class FasterAnimationsContainer {
     private OnAnimationStoppedListener mOnAnimationStoppedListener;
     private OnAnimationFrameChangedListener mOnAnimationFrameChangedListener;
 
-    private FasterAnimationsContainer(ImageView imageView) {
+    private FasterAnimContainer(ImageView imageView) {
         init(imageView);
     }
 
-    private static FasterAnimationsContainer sInstance;
+    private static FasterAnimContainer sInstance;
 
-    public static FasterAnimationsContainer getInstance(ImageView imageView) {
+    public static FasterAnimContainer getInstance(ImageView imageView) {
         if (sInstance == null)
-            sInstance = new FasterAnimationsContainer(imageView);
+            sInstance = new FasterAnimContainer(imageView);
         sInstance.mRecycleBitmap = null;
         return sInstance;
     }

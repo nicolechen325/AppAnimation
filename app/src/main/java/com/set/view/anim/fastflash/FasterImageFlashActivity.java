@@ -9,9 +9,9 @@ import com.set.view.R;
 /**
  * 帧动画
  */
-public class FasterImageAnimActivity extends AppCompatActivity {
+public class FasterImageFlashActivity extends AppCompatActivity {
 
-    FasterAnimationsContainer mFasterAnimationsContainer;
+    FasterAnimContainer mFasterAnimationsContainer;
     private static final int[] IMAGE_RESOURCES = {R.drawable.anim_0, R.drawable.anim_1,
             R.drawable.anim_2, R.drawable.anim_3, R.drawable.anim_4,
             R.drawable.anim_5, R.drawable.anim_6, R.drawable.anim_7
@@ -24,7 +24,7 @@ public class FasterImageAnimActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_anim_faster_flash);
         ImageView imageView = findViewById(R.id.img_faster_flash);
-        mFasterAnimationsContainer = FasterAnimationsContainer
+        mFasterAnimationsContainer = FasterAnimContainer
                 .getInstance(imageView);
         mFasterAnimationsContainer.addAllFrames(IMAGE_RESOURCES,
                 ANIMATION_INTERVAL);
