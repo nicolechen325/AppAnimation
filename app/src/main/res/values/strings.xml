@@ -2,4 +2,12 @@
     <string name="app_name">视图</string>
 
     <string name="load_image">正在加载</string>
+
+    <!--刷新-->
+    <string name="pull_to_refresh_from_bottom_pull_label">上拉加载更多...</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">手指松开加载更多...</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新…</string>
+    <string name="pull_to_refresh_refreshing_label">加载中…</string>
+    <string name="pull_to_refresh_release_label">手指松开刷新…</string>
 </resources>

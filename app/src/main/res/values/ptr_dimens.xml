@@ -1,0 +1,14 @@
+<resources>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="pill_ptr_content_padding_bottom">5dp</dimen>
+    <dimen name="pill_ptr_content_refresh_height">75dp</dimen>
+    <dimen name="pill_ptr_content_refresh_hide_height">44dp</dimen>
+    <dimen name="pill_ptr_image_bg_height">100dp</dimen>
+    <dimen name="pill_ptr_image_bg_width">200dp</dimen>
+    <dimen name="pill_ptr_image_height">56dp</dimen>
+    <dimen name="pill_ptr_image_width">56dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+</resources>
