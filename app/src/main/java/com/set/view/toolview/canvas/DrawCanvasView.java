@@ -108,6 +108,32 @@ public class DrawCanvasView extends View {
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setColor(0xff0000ff);
         canvas.drawArc(rectF3, 0, 120, true, mPaint);
+
+        drawAxis(canvas);
+
     }
 
+    //坐标系，以左上角原点
+    private void drawAxis(Canvas canvas) {
+        int canvasWidth = canvas.getWidth();
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setStrokeWidth(6);
+
+        mPaint.setColor(0xff33b5e5);
+        drawXYAxis(canvas);
+
+        canvas.translate(canvasWidth / 4, canvasWidth / 4);
+        drawXYAxis(canvas);
+
+        canvas.translate(canvasWidth / 4, canvasWidth / 4);
+        canvas.rotate(60);//基于当前绘图坐标系的原点旋转坐标系
+        drawXYAxis(canvas);
+    }
+
+    void drawXYAxis(Canvas canvas) {
+        mPaint.setColor(0xff33b5e5);
+        canvas.drawLine(0, 0, canvas.getWidth(), 0, mPaint);//x轴
+        mPaint.setColor(0xffff4444);
+        canvas.drawLine(0, 0, 0, canvas.getHeight(), mPaint);
+    }
 }
