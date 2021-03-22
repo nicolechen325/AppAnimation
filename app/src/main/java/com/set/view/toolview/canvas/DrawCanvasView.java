@@ -1,8 +1,11 @@
 package com.set.view.toolview.canvas;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -10,25 +13,34 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
+import com.set.view.R;
+
 /**
  * Canvas 绘制
  */
 public class DrawCanvasView extends View {
     private final String TAG_02 = "DrawCanvasView";
     private Paint mPaint;
+    private Bitmap mBitmap;
 
     public DrawCanvasView(Context context) {
         super(context);
-        mPaint = new Paint();
+        init();
     }
 
     public DrawCanvasView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        mPaint = new Paint();
+        init();
     }
 
     public DrawCanvasView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
+
+    }
+
+    void init() {
+        mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.image_scale);
         mPaint = new Paint();
     }
 
@@ -94,7 +106,6 @@ public class DrawCanvasView extends View {
         canvas.restore();
 
         //drawArc
-        int count = 5;
         float ovalHeight = height / 6;
         float left3 = 10;
         float top3 = height * 2 / 3;
@@ -111,6 +122,7 @@ public class DrawCanvasView extends View {
 
         drawAxis(canvas);
 
+        drawBitmap(canvas);
     }
 
     //坐标系，以左上角原点
@@ -121,6 +133,7 @@ public class DrawCanvasView extends View {
 
         mPaint.setColor(0xff33b5e5);
         drawXYAxis(canvas);
+        canvas.save();
 
         canvas.translate(canvasWidth / 4, canvasWidth / 4);
         drawXYAxis(canvas);
@@ -128,6 +141,8 @@ public class DrawCanvasView extends View {
         canvas.translate(canvasWidth / 4, canvasWidth / 4);
         canvas.rotate(60);//基于当前绘图坐标系的原点旋转坐标系
         drawXYAxis(canvas);
+
+        canvas.restore();
     }
 
     void drawXYAxis(Canvas canvas) {
@@ -136,4 +151,32 @@ public class DrawCanvasView extends View {
         mPaint.setColor(0xffff4444);
         canvas.drawLine(0, 0, 0, canvas.getHeight(), mPaint);
     }
+
+    //drawBitmap
+    private void drawBitmap(Canvas canvas) {
+        if (mBitmap == null) {
+            return;
+        }
+
+        canvas.drawBitmap(mBitmap, 0, getHeight() / 2, mPaint);
+
+        int bitmapWidth = mBitmap.getWidth();
+        int bitmapHeight = mBitmap.getHeight();
+        Log.d(TAG_02, "bitmap width:" + bitmapWidth + ",bitmap height:" + bitmapHeight);
+
+        Rect srcRect = new Rect();//源rect
+        srcRect.left = 0;
+        srcRect.right = bitmapWidth;
+        srcRect.top = 0;
+        srcRect.bottom = (int) (0.1 * bitmapHeight);
+        float radio = (float) (srcRect.bottom - srcRect.top) / bitmapWidth;//计算宽高比
+        RectF dstRecF = new RectF();//目标rect
+        dstRecF.left = 0;
+        dstRecF.right = canvas.getWidth();
+        dstRecF.top = 0;
+        float dstHeight = (dstRecF.right - dstRecF.left) * radio;
+        dstRecF.bottom = dstRecF.top + dstHeight;
+        canvas.drawBitmap(mBitmap, srcRect, dstRecF, mPaint);
+    }
+
 }
