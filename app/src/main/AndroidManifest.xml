@@ -54,7 +54,9 @@
             android:theme="@style/AppThemeNoBar" />
 
         <!--View-->
-        <activity android:name=".toolview.ViewTranslationActivity" />
+        <activity android:name=".toolview.ViewRouteActivity" />
+        <activity android:name=".toolview.translation.ViewTranslationActivity" />
+        <activity android:name=".toolview.canvas.ViewDrawCanvasActivity" />
 
         <!-- Touch-->
         <activity android:name=".touch.TouchEventActivity" />

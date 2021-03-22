@@ -1,4 +1,4 @@
-package com.set.view.toolview;
+package com.set.view.toolview.translation;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
