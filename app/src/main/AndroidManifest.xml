@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.set.view">
+    package="com.set.ui">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
-        android:name=".MyApplication"
+        android:name="com.set.ui.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,7 +19,7 @@
         android:theme="@style/AppTheme">
 
         <!--主页-->
-        <activity android:name="com.set.view.MainActivity">
+        <activity android:name="com.set.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,49 +28,50 @@
         </activity>
 
         <!--各类动画-->
-        <activity android:name=".anim.AnimRouteActivity" />
-        <activity android:name=".anim.sample.TweenAnimActivity" />
-        <activity android:name=".anim.sample.PropertyAnimActivity" />
-        <activity android:name=".anim.sample.FrameAnimActivity" />
-        <activity android:name=".anim.sample.AnimInterpolatorActivity" />
-        <activity android:name=".anim.dialog3d.Anim3dActivity" />
-        <activity android:name=".anim.explosion.ExplosionActivity" />
-        <activity android:name=".anim.fastflash.FasterImageFlashActivity" />
-        <activity android:name=".anim.loading.LoadingActivity" />
-        <activity android:name=".anim.opendoor.OpenDoorActivity" />
-        <activity android:name=".anim.scroller.ScrollerActivity" />
+        <activity android:name="com.set.ui.anim.AnimRouteActivity" />
+        <activity android:name="com.set.ui.anim.sample.TweenAnimActivity" />
+        <activity android:name="com.set.ui.anim.sample.PropertyAnimActivity" />
+        <activity android:name="com.set.ui.anim.sample.FrameAnimActivity" />
+        <activity android:name="com.set.ui.anim.sample.AnimInterpolatorActivity" />
+        <activity android:name="com.set.ui.anim.dialog3d.Anim3dActivity" />
+        <activity android:name="com.set.ui.anim.explosion.ExplosionActivity" />
+        <activity android:name="com.set.ui.anim.fastflash.FasterImageFlashActivity" />
+        <activity android:name="com.set.ui.anim.loading.LoadingActivity" />
+        <activity android:name="com.set.ui.anim.opendoor.OpenDoorActivity" />
+        <activity android:name="com.set.ui.anim.scroller.ScrollerActivity" />
 
         <!--Image -->
-        <activity android:name=".image.ImageRouteActivity" />
-        <activity android:name=".image.ImageScaleActivity" />
-        <activity android:name=".image.NinePngActivity" />
+        <activity android:name="com.set.ui.image.ImageRouteActivity" />
+        <activity android:name="com.set.ui.image.ImageScaleActivity" />
+        <activity android:name="com.set.ui.image.NinePngActivity" />
 
         <!-- Scroll -->
-        <activity android:name=".scroll.ScrollRouteActivity" />
-        <activity android:name=".scroll.viewtype.RecyclerViewTypeActivity" />
-        <activity android:name=".scroll.scrollview.ScrollViewActivity" />
+        <activity android:name="com.set.ui.scroll.ScrollRouteActivity" />
+        <activity android:name="com.set.ui.scroll.viewtype.RecyclerViewTypeActivity" />
+        <activity android:name="com.set.ui.scroll.scrollview.ScrollViewActivity" />
         <activity
-            android:name=".scroll.coordinator.CoordinatorActivity"
+            android:name="com.set.ui.scroll.coordinator.CoordinatorActivity"
             android:theme="@style/AppThemeNoBar" />
 
         <!--View-->
-        <activity android:name=".toolview.ViewRouteActivity" />
-        <activity android:name=".toolview.translation.ViewTranslationActivity" />
-        <activity android:name=".toolview.canvas.ViewDrawCanvasActivity" />
+        <activity android:name="com.set.ui.view.ViewRouteActivity" />
+        <activity android:name="com.set.ui.view.viewpager2.ViewPager2Activity" />
+        <activity android:name="com.set.ui.view.translation.ViewTranslationActivity" />
+        <activity android:name="com.set.ui.view.canvas.ViewDrawCanvasActivity" />
 
         <!-- Touch-->
-        <activity android:name=".touch.TouchEventActivity" />
+        <activity android:name="com.set.ui.touch.TouchEventActivity" />
 
         <!-- Surface -->
         <activity
-            android:name=".surface.SurfaceRouteActivity"
+            android:name="com.set.ui.surface.SurfaceRouteActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".surface.SurfaceHolderActivity" />
-        <activity android:name=".surface.TextureViewActivity" />
-        <activity android:name=".surface.SurfaceViewActivity" />
-        <activity android:name=".surface.video.TextureVideoActivity" />
+        <activity android:name="com.set.ui.surface.SurfaceHolderActivity" />
+        <activity android:name="com.set.ui.surface.TextureViewActivity" />
+        <activity android:name="com.set.ui.surface.SurfaceViewActivity" />
+        <activity android:name="com.set.ui.surface.video.TextureVideoActivity" />
     </application>
 
     <!--适配全面屏幕-->

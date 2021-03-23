@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.set.view.surface.video.VideoPlayer
+    <com.set.ui.surface.video.VideoPlayer
         android:id="@+id/video_player"
         android:layout_width="match_parent"
         android:layout_height="180dp"
@@ -12,7 +12,7 @@
         android:layout_marginBottom="8dp" />
 
 
-    <com.set.view.surface.video.VideoController
+    <com.set.ui.surface.video.VideoController
         android:id="@+id/video_controller"
         android:layout_width="match_parent"
         android:layout_height="180dp" />
