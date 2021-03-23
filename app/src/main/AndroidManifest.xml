@@ -49,6 +49,7 @@
         <activity android:name="com.set.ui.scroll.ScrollRouteActivity" />
         <activity android:name="com.set.ui.scroll.viewtype.RecyclerViewTypeActivity" />
         <activity android:name="com.set.ui.scroll.scrollview.ScrollViewActivity" />
+        <activity android:name="com.set.ui.scroll.recyclerview.RecyclerViewActivity" />
         <activity
             android:name="com.set.ui.scroll.coordinator.CoordinatorActivity"
             android:theme="@style/AppThemeNoBar" />
