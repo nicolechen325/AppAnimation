@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ui.myapplicationmeun.MainActivity">
+    <item
+        android:id="@+id/action_select0"
+        android:orderInCategory="100"
+        android:title="layout"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_select1"
+        android:orderInCategory="100"
+        android:title="offsetLeftAndRight"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_select2"
+        android:orderInCategory="100"
+        android:title="layoutParams"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_select3"
+        android:orderInCategory="100"
+        android:title="scroll"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_select4"
+        android:orderInCategory="100"
+        android:title="translationXY"
+        app:showAsAction="never" />
+</menu>
