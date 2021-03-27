@@ -26,5 +26,13 @@ public class MRotateAnimation extends RotateAnimation {
     @Override
     protected void applyTransformation(float interpolatedTime, Transformation t) {
         super.applyTransformation(interpolatedTime, t);
+        if (transforiLog != null) {
+            transforiLog.onTransLog(interpolatedTime);
+        }
+    }
+    TransforiLog transforiLog;
+
+    public void setTransforiLog(TransforiLog transforiLog) {
+        this.transforiLog = transforiLog;
     }
 }

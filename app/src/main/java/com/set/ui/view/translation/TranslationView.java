@@ -30,6 +30,8 @@ public class TranslationView extends View {
     private int sourceRight;
     private int sourceBottom;
 
+    OnLogPrint onLogPrint;
+
     public TranslationView(Context context) {
         super(context);
         init();
@@ -122,30 +124,51 @@ public class TranslationView extends View {
         int offsetx = currentX - lastX;
         int offsety = currentY - lastY;
 
-        if (type == 0) {
-            layout(offsetx, offsety);
-        } else if (type == 1) {
-            offsetLeftAndRight(offsetx);  //对top和bottom偏移
-            offsetTopAndBottom(offsety);
-        } else if (type == 2) {
-            layoutParams(offsetx, offsety);
-        } else if (type == 3) {
-            scroll(offsetx, offsety);
-        } else if (type == 4) {
-            translationXY(offsetx, offsety);
+
+        switch (type) {
+            case 0:
+                layout(offsetx, offsety);
+                break;
+            case 1:
+                offsetLeftAndRight(offsetx);  //对top和bottom偏移
+                offsetTopAndBottom(offsety);
+                break;
+            case 2:
+                layoutParams(offsetx, offsety);
+                break;
+            case 3:
+                scroll(offsetx, offsety);
+                break;
+            case 4:
+                translationXY(offsetx, offsety);
+                break;
         }
 
-        Log.d(TAG_1 + "onMove",
-                ":offsetx:" + offsetx +
-                        ",offsety:" + offsety +
-                        ",mLeft:" + getLeft() +
-                        ",mTop:" + getTop() +
-                        ",mRight:" + getRight() +
-                        ",mBottom:" + getBottom() +
-                        ",translationX:" + getTranslationX() +
-                        ",translationY:" + getTranslationY() +
-                        ",mScrollX:" + getScrollX() +
-                        ",mScrollY:" + getScrollY());
+        if (onLogPrint != null) {
+            String logMsgMoreLine = "offsetx:" + offsetx + "\n" +
+                    "offsety:" + offsety + "\n" +
+                    "mLeft:" + getLeft() + "\n" +
+                    "mTop:" + getTop() + "\n" +
+                    "mRight:" + getRight() + "\n" +
+                    "mBottom:" + getBottom() + "\n" +
+                    "translationX:" + getTranslationX() + "\n" +
+                    "translationY:" + getTranslationY() + "\n" +
+                    "mScrollX:" + getScrollX() + "\n" +
+                    "mScrollY:" + getScrollY();
+            onLogPrint.onLogPrint(logMsgMoreLine);
+        }
+
+        String logMsg = ":offsetx:" + offsetx +
+                ",offsety:" + offsety +
+                ",mLeft:" + getLeft() +
+                ",mTop:" + getTop() +
+                ",mRight:" + getRight() +
+                ",mBottom:" + getBottom() +
+                ",translationX:" + getTranslationX() +
+                ",translationY:" + getTranslationY() +
+                ",mScrollX:" + getScrollX() +
+                ",mScrollY:" + getScrollY();
+        Log.d(TAG_1 + "onMove", logMsg);
     }
 
     void layout(int offsetx, int offsety) {
@@ -250,5 +273,13 @@ public class TranslationView extends View {
                 break;
         }
         Log.d(TAG_1 + "Touch", actStr + ":x:" + x + ",y:" + y + ",rawx:" + rawx + ",rawy:" + rawy);
+    }
+
+    public void setOnLogPrint(OnLogPrint onLogPrint) {
+        this.onLogPrint = onLogPrint;
+    }
+
+    interface OnLogPrint {
+        void onLogPrint(String msg);
     }
 }

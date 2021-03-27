@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.set.ui.R;
 
@@ -15,7 +16,7 @@ import com.set.ui.R;
  */
 public class ViewTranslationActivity extends AppCompatActivity {
     public static final String TAG_3 = "ViewTranslationActivity";
-
+    private TextView mTextLog;
     private TranslationView mTranslationView;
 
     @Override
@@ -27,6 +28,10 @@ public class ViewTranslationActivity extends AppCompatActivity {
 
     protected void initView() {
         mTranslationView = findViewById(R.id.translation_view);
+        mTextLog = findViewById(R.id.tv_view_log);
+        mTranslationView.setOnLogPrint(v -> {
+            mTextLog.setText(v);
+        });
     }
 
     @Override

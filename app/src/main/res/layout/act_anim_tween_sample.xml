@@ -1,121 +1,144 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/id_container"
+    <ScrollView
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/id_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.set.ui.anim.xanim.DrawAnimationLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#f4f4f4"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.set.ui.anim.xanim.DrawAnimationTextView
+                    android:id="@+id/tv_anim_scale"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@color/red_light"
+                    android:gravity="center"
+                    android:text="缩放"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher" />
+            </com.set.ui.anim.xanim.DrawAnimationLayout>
+
+            <com.set.ui.anim.xanim.DrawAnimationLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="#f4f4f4"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.set.ui.anim.xanim.DrawAnimationTextView
+                    android:id="@+id/tv_anim_alpha"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@color/red_light"
+                    android:gravity="center"
+                    android:text="透明度"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher" />
+            </com.set.ui.anim.xanim.DrawAnimationLayout>
+
+            <com.set.ui.anim.xanim.DrawAnimationLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="#f4f4f4"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.set.ui.anim.xanim.DrawAnimationTextView
+                    android:id="@+id/tv_anim_translate"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@color/red_light"
+                    android:gravity="center"
+                    android:text="平移"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher" />
+            </com.set.ui.anim.xanim.DrawAnimationLayout>
+
+            <com.set.ui.anim.xanim.DrawAnimationLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="#f4f4f4"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.set.ui.anim.xanim.DrawAnimationTextView
+                    android:id="@+id/tv_anim_rotate"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@color/red_light"
+                    android:gravity="center"
+                    android:text="旋转"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher" />
+            </com.set.ui.anim.xanim.DrawAnimationLayout>
+
+
+            <com.set.ui.anim.xanim.DrawAnimationLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="#f4f4f4"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.set.ui.anim.xanim.DrawAnimationTextView
+                    android:id="@+id/tv_anim_all"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@color/red_light"
+                    android:gravity="center"
+                    android:text="All"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher" />
+            </com.set.ui.anim.xanim.DrawAnimationLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/anim_tv_view_log"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <com.set.ui.anim.xanim.DrawAnimationLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="#cfcfcf"
-            android:orientation="horizontal">
-
-            <com.set.ui.anim.xanim.DrawAnimationTextView
-                android:id="@+id/tv_anim_scale"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:background="#00afcc"
-                android:gravity="center"
-                android:text="缩放"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher" />
-        </com.set.ui.anim.xanim.DrawAnimationLayout>
-
-        <com.set.ui.anim.xanim.DrawAnimationLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="20dp"
-            android:background="#cfcfcf"
-            android:orientation="horizontal">
-
-            <com.set.ui.anim.xanim.DrawAnimationTextView
-                android:id="@+id/tv_anim_alpha"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:background="#00afcc"
-                android:gravity="center"
-                android:text="透明度"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher" />
-        </com.set.ui.anim.xanim.DrawAnimationLayout>
-
-        <com.set.ui.anim.xanim.DrawAnimationLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="20dp"
-            android:background="#cfcfcf"
-            android:orientation="horizontal">
-
-            <com.set.ui.anim.xanim.DrawAnimationTextView
-                android:id="@+id/tv_anim_translate"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:background="#00afcc"
-                android:gravity="center"
-                android:text="平移"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher" />
-        </com.set.ui.anim.xanim.DrawAnimationLayout>
-
-        <com.set.ui.anim.xanim.DrawAnimationLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="20dp"
-            android:background="#cfcfcf"
-            android:orientation="horizontal">
-
-            <com.set.ui.anim.xanim.DrawAnimationTextView
-                android:id="@+id/tv_anim_rotate"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:background="#00afcc"
-                android:gravity="center"
-                android:text="旋转"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher" />
-        </com.set.ui.anim.xanim.DrawAnimationLayout>
-
-
-        <com.set.ui.anim.xanim.DrawAnimationLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="20dp"
-            android:background="#cfcfcf"
-            android:orientation="horizontal">
-
-            <com.set.ui.anim.xanim.DrawAnimationTextView
-                android:id="@+id/tv_anim_all"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:background="#00afcc"
-                android:gravity="center"
-                android:text="All"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher" />
-        </com.set.ui.anim.xanim.DrawAnimationLayout>
-    </LinearLayout>
-</ScrollView>
+        android:padding="10dp"
+        android:textColor="@color/blue_light"
+        android:textSize="16sp" />
+</FrameLayout>

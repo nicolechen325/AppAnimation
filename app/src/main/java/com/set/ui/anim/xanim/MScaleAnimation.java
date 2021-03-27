@@ -21,13 +21,17 @@ public class MScaleAnimation extends ScaleAnimation {
     public MScaleAnimation(float fromX, float toX, float fromY, float toY, int pivotXType, float pivotXValue, int pivotYType, float pivotYValue) {
         super(fromX, toX, fromY, toY, pivotXType, pivotXValue, pivotYType, pivotYValue);
     }
-
-
-
-
-
     @Override
     protected void applyTransformation(float interpolatedTime, Transformation t) {
         super.applyTransformation(interpolatedTime, t);
+        if (transforiLog != null) {
+            transforiLog.onTransLog(interpolatedTime);
+        }
     }
+    TransforiLog transforiLog;
+
+    public void setTransforiLog(TransforiLog transforiLog) {
+        this.transforiLog = transforiLog;
+    }
+
 }

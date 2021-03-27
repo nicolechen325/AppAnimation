@@ -17,11 +17,20 @@ public class MAlphaAnimation extends AlphaAnimation {
     @Override
     protected void applyTransformation(float interpolatedTime, Transformation t) {
         super.applyTransformation(interpolatedTime, t);
+        if (transforiLog != null) {
+            transforiLog.onTransLog(interpolatedTime);
+        }
     }
 
     @Override
     public boolean willChangeBounds() {
         return super.willChangeBounds();
         // AlphaAnimation 默认 false ，其他 true
+    }
+
+    TransforiLog transforiLog;
+
+    public void setTransforiLog(TransforiLog transforiLog) {
+        this.transforiLog = transforiLog;
     }
 }

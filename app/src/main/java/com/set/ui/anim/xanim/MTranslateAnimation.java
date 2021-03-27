@@ -5,6 +5,8 @@ import android.util.AttributeSet;
 import android.view.animation.Transformation;
 import android.view.animation.TranslateAnimation;
 
+import java.nio.IntBuffer;
+
 public class MTranslateAnimation extends TranslateAnimation {
     public MTranslateAnimation(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -21,5 +23,13 @@ public class MTranslateAnimation extends TranslateAnimation {
     @Override
     protected void applyTransformation(float interpolatedTime, Transformation t) {
         super.applyTransformation(interpolatedTime, t);
+        if (transforiLog != null) {
+            transforiLog.onTransLog(interpolatedTime);
+        }
+    }
+
+    TransforiLog transforiLog;
+    public void setTransforiLog(TransforiLog transforiLog) {
+        this.transforiLog = transforiLog;
     }
 }
