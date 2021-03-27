@@ -33,6 +33,7 @@
         <activity android:name="com.set.ui.anim.sample.PropertyAnimActivity" />
         <activity android:name="com.set.ui.anim.sample.FrameAnimActivity" />
         <activity android:name="com.set.ui.anim.sample.AnimInterpolatorActivity" />
+        <activity android:name="com.set.ui.anim.sample.AnimEvaluatorActivity" />
         <activity android:name="com.set.ui.anim.dialog3d.Anim3dActivity" />
         <activity android:name="com.set.ui.anim.explosion.ExplosionActivity" />
         <activity android:name="com.set.ui.anim.fastflash.FasterImageFlashActivity" />

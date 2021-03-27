@@ -20,7 +20,7 @@ import android.widget.ImageView;
 import com.set.ui.R;
 
 /**
- * 补间动画-插值器
+ * 插值器
  */
 public class AnimInterpolatorActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG_1 = "TweenInterpolatorrActivity";
