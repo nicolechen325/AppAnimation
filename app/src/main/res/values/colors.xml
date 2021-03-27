@@ -34,6 +34,7 @@
     <color name="purple_light">#e488ff</color>
     <color name="red_start">#EE3455</color>
     <color name="red_end">#FFaa89</color>
+    <color name="yellow">#fffd0a</color>
 
 
 </resources>

@@ -1,82 +1,17 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.set.ui.anim.scroller.ReBoundScrollerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yellow"
+    android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="移动坐标为(50,0),偏移量为(-50,0)" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_scrollto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="scrollTo" />
-
-        <Button
-            android:id="@+id/btn_scrollby"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="scrollBy" />
-
-        <Button
-            android:id="@+id/btn_reset"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="reset" />
-    </LinearLayout>
-
-    <com.set.ui.anim.scroller.ReBoundScrollerLayout
-        android:layout_width="match_parent"
-        android:layout_height="560dp"
-        android:background="#fffd0a"
+        android:layout_height="180dp"
+        android:background="@color/red_light"
         android:gravity="center"
-        android:orientation="vertical">
+        android:text="改变父控件ScrollY"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:background="#fffda0"
-            android:gravity="center"
-            android:text="改变父控件mScrollY
-           " />
-
-        <!-- TextView内容滚动 -->
-        <TextView
-            android:id="@+id/tv_scroll_inside"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="#fffda0"
-            android:gravity="center_vertical"
-            android:text="textview_scroll_inside"
-            android:textSize="25sp" />
-        <!-- Layout内容滚动 -->
-        <LinearLayout
-            android:id="@+id/ll_scroll_inside_view"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:background="#fffda0"
-                android:gravity="center"
-                android:text="abc"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-    </com.set.ui.anim.scroller.ReBoundScrollerLayout>
-
-
-</LinearLayout>
+</com.set.ui.anim.scroller.ReBoundScrollerLayout>

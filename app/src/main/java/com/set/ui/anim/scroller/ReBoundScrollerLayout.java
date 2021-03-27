@@ -7,20 +7,32 @@ import android.view.MotionEvent;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
 
+import androidx.annotation.Nullable;
+
 /**
  * 回弹控件
  */
 public class ReBoundScrollerLayout extends LinearLayout {
+    private final String TAG_05 = "ReBoundScrollerLayout";
     private Scroller mScroller;
-    private final String TAG = "ReBoundLayout";
     private int mLastMotionY;
 
     public ReBoundScrollerLayout(Context context) {
-        this(context, null);
+        super(context);
+        init(context);
     }
 
-    public ReBoundScrollerLayout(Context context, AttributeSet attrs) {
+    public ReBoundScrollerLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        init(context);
+    }
+
+    public ReBoundScrollerLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context);
+    }
+
+    private void init(Context context) {
         setClickable(true);
         setLongClickable(true);
         mScroller = new Scroller(context);
@@ -35,8 +47,13 @@ public class ReBoundScrollerLayout extends LinearLayout {
         super.computeScroll();
     }
 
-    //比较简单的实现，若内部控件太多，需要实现打断方法
-    //这里只说明原理。
+    /**
+     * 比较简单的实现，若内部控件太多，需要实现打断方法
+     * 这里只说明原理。
+     *
+     * @param ev
+     * @return
+     */
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         final int actionMasked = ev.getActionMasked();
@@ -49,7 +66,7 @@ public class ReBoundScrollerLayout extends LinearLayout {
             case MotionEvent.ACTION_MOVE:
                 final int y = (int) ev.getY();
                 int deltaY = mLastMotionY - y;//deltaY
-                Log.d(TAG, deltaY + "");
+                Log.d(TAG_05, deltaY + "");
                 int disY = (int) (2 * (deltaY - 0.5) / 3);
                 //scrollBy(0, disY);
                 beginScroll(0, disY);

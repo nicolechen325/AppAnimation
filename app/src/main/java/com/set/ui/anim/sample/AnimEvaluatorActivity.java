@@ -66,16 +66,13 @@ public class AnimEvaluatorActivity extends AppCompatActivity implements View.OnC
         ValueAnimator animator = ValueAnimator.ofObject(new PaoWuLineEvaluator(), new PointF(0, 0));
         animator.setDuration(2000);
         animator.setInterpolator(new LinearInterpolator());
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                PointF pointF = (PointF) animation.getAnimatedValue();
-                target.setX(pointF.x);
-                target.setY(pointF.y);
-                target.setAlpha((float) 1.2 - animation.getAnimatedFraction());
+        animator.addUpdateListener(animation -> {
+            PointF pointF = (PointF) animation.getAnimatedValue();
+            target.setX(pointF.x);
+            target.setY(pointF.y);
+            target.setAlpha((float) 1.2 - animation.getAnimatedFraction());
 
-                logView(pointF);
-            }
+            logView(pointF);
         });
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
