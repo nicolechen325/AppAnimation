@@ -10,7 +10,7 @@ import android.widget.Scroller;
 import androidx.annotation.Nullable;
 
 /**
- * 回弹控件
+ * Scroller控件
  */
 public class ReBoundScrollerLayout extends LinearLayout {
     private final String TAG_05 = "ReBoundScrollerLayout";
