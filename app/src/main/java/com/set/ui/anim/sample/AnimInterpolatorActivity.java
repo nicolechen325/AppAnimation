@@ -1,13 +1,14 @@
 package com.set.ui.anim.sample;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.AnticipateInterpolator;
 import android.view.animation.AnticipateOvershootInterpolator;
 import android.view.animation.BounceInterpolator;
@@ -15,34 +16,34 @@ import android.view.animation.CycleInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
-import android.widget.ImageView;
+import android.view.animation.TranslateAnimation;
 
 import com.set.ui.R;
 
 /**
  * 插值器
  */
-public class AnimInterpolatorActivity extends AppCompatActivity implements View.OnClickListener {
-    public static final String TAG_1 = "TweenInterpolatorrActivity";
-    ImageView imageView1;
-    ImageView imageView2;
-    ImageView imageView3;
-    ImageView imageView4;
-    ImageView imageView5;
-    ImageView imageView6;
-    ImageView imageView7;
-    ImageView imageView8;
-    ImageView imageView9;
+public class AnimInterpolatorActivity extends AppCompatActivity {
+    public static final String TAG_1 = "AnimInterpolatorActivity";
+    private View animView1;
+    private View animView2;
+    private View animView3;
+    private View animView4;
+    private View animView5;
+    private View animView6;
+    private View animView7;
+    private View animView8;
+    private View animView9;
 
-    Animation animation1;
-    Animation animation2;
-    Animation animation3;
-    Animation animation4;
-    Animation animation5;
-    Animation animation6;
-    Animation animation7;
-    Animation animation8;
-    Animation animation9;
+    private Animation animation1;
+    private Animation animation2;
+    private Animation animation3;
+    private Animation animation4;
+    private Animation animation5;
+    private Animation animation6;
+    private Animation animation7;
+    private Animation animation8;
+    private Animation animation9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,28 +55,40 @@ public class AnimInterpolatorActivity extends AppCompatActivity implements View.
     }
 
     protected void initView() {
-        imageView1 = findViewById(R.id.img_tween_interpolator_1);
-        imageView2 = findViewById(R.id.img_tween_interpolator_2);
-        imageView3 = findViewById(R.id.img_tween_interpolator_3);
-        imageView4 = findViewById(R.id.img_tween_interpolator_4);
-        imageView5 = findViewById(R.id.img_tween_interpolator_5);
-        imageView6 = findViewById(R.id.img_tween_interpolator_6);
-        imageView7 = findViewById(R.id.img_tween_interpolator_7);
-        imageView8 = findViewById(R.id.img_tween_interpolator_8);
-        imageView9 = findViewById(R.id.img_tween_interpolator_9);
-
+        animView1 = findViewById(R.id.img_tween_interpolator_1);
+        animView2 = findViewById(R.id.img_tween_interpolator_2);
+        animView3 = findViewById(R.id.img_tween_interpolator_3);
+        animView4 = findViewById(R.id.img_tween_interpolator_4);
+        animView5 = findViewById(R.id.img_tween_interpolator_5);
+        animView6 = findViewById(R.id.img_tween_interpolator_6);
+        animView7 = findViewById(R.id.img_tween_interpolator_7);
+        animView8 = findViewById(R.id.img_tween_interpolator_8);
+        animView9 = findViewById(R.id.img_tween_interpolator_9);
     }
 
     void loadAnimation() {
-        animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.tween_anim_interpolator);
-        animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.tween_anim_interpolator);
-        animation3 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.tween_anim_interpolator);
-        animation4 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.tween_anim_interpolator);
-        animation5 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.tween_anim_interpolator);
-        animation6 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.tween_anim_interpolator);
-        animation7 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.tween_anim_interpolator);
-        animation8 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.tween_anim_interpolator);
-        animation9 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.tween_anim_interpolator);
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(outMetrics);
+        int widthPixels = outMetrics.widthPixels;
+
+        animation1 = new TranslateAnimation(0, widthPixels * 0.82f, 0, 0);
+        animation1.setDuration(5000);
+        animation2 = new TranslateAnimation(0, widthPixels * 0.82f, 0, 0);
+        animation2.setDuration(5000);
+        animation3 = new TranslateAnimation(0, widthPixels * 0.82f, 0, 0);
+        animation3.setDuration(5000);
+        animation4 = new TranslateAnimation(0, widthPixels * 0.82f, 0, 0);
+        animation4.setDuration(5000);
+        animation5 = new TranslateAnimation(0, widthPixels * 0.82f, 0, 0);
+        animation5.setDuration(5000);
+        animation6 = new TranslateAnimation(0, widthPixels * 0.82f, 0, 0);
+        animation6.setDuration(5000);
+        animation7 = new TranslateAnimation(0, widthPixels * 0.82f, 0, 0);
+        animation7.setDuration(5000);
+        animation8 = new TranslateAnimation(0, widthPixels * 0.82f, 0, 0);
+        animation8.setDuration(5000);
+        animation9 = new TranslateAnimation(0, widthPixels * 0.82f, 0, 0);
+        animation9.setDuration(5000);
 
         //动画结束后保留结束状态
         animation1.setFillAfter(true);
@@ -88,17 +101,18 @@ public class AnimInterpolatorActivity extends AppCompatActivity implements View.
         animation8.setFillAfter(true);
         animation9.setFillAfter(true);
 
-//        AccelerateDecelerateInterpolator：开始和结束的时候慢，中间快
-//        AccelerateInterpolator：开始的时候慢，然后加速
-//        AnticipateInterpolator：开始先后退，然后向前
-//        AnticipateOvershootInterpolator： 开始先后退，然向前到超标，最后回到最终值
-//        BounceInterpolator ：最后会反弹
-//        CycleInterpolator：动画会重复一定的周期数
-//        DecelerateInterpolator：开始快，然后减速
-//        LinearInterpolator：变化匀速
-//        OvershootInterpolator：到达最终值后超标，再回到最终值
-//        TimeInterpolator：用来自定义插值器
-
+        /**
+         *   AccelerateDecelerateInterpolator：开始和结束的时候慢，中间快
+         *   AccelerateInterpolator：开始的时候慢，然后加速
+         *   AnticipateInterpolator：开始先后退，然后向前
+         *   AnticipateOvershootInterpolator： 开始先后退，然向前到超标，最后回到最终值
+         *   BounceInterpolator ：最后会反弹
+         *   CycleInterpolator：动画会重复一定的周期数
+         *   DecelerateInterpolator：开始快，然后减速
+         *   LinearInterpolator：变化匀速
+         *   OvershootInterpolator：到达最终值后超标，再回到最终值
+         *   TimeInterpolator：用来自定义插值器
+         */
         animation1.setInterpolator(new AccelerateDecelerateInterpolator());
         animation2.setInterpolator(new AccelerateInterpolator());
         animation3.setInterpolator(new AnticipateInterpolator());
@@ -113,23 +127,15 @@ public class AnimInterpolatorActivity extends AppCompatActivity implements View.
 
 
     void startAnimation() {
-        imageView1.setAnimation(animation1);
-        imageView2.setAnimation(animation2);
-        imageView3.setAnimation(animation3);
-        imageView4.setAnimation(animation4);
-        imageView5.setAnimation(animation5);
-        imageView6.setAnimation(animation6);
-        imageView7.setAnimation(animation7);
-        imageView8.setAnimation(animation8);
-        imageView9.setAnimation(animation9);
+        animView1.setAnimation(animation1);
+        animView2.setAnimation(animation2);
+        animView3.setAnimation(animation3);
+        animView4.setAnimation(animation4);
+        animView5.setAnimation(animation5);
+        animView6.setAnimation(animation6);
+        animView7.setAnimation(animation7);
+        animView8.setAnimation(animation8);
+        animView9.setAnimation(animation9);
     }
 
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.img_tween_interpolator_1:
-                break;
-        }
-    }
 }
