@@ -1,12 +1,13 @@
 package com.set.ui.anim.sample;
 
-import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.ImageView;
 
 import com.set.ui.R;
+import com.set.ui.anim.xanim.AnimationImageView;
+import com.set.ui.anim.xanim.MAnimationDrawable;
 
 /**
  * 帧动画
@@ -18,16 +19,16 @@ public class FrameAnimActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_anim_frame_sample);
-        ImageView imageView = findViewById(R.id.img_frame);
+        AnimationImageView imageView = findViewById(R.id.img_frame);
 
-        AnimationDrawable anim = new AnimationDrawable();
+        MAnimationDrawable anim = new MAnimationDrawable();
         for (int i = 0; i <= 7; i++) {
             int id = getResources().getIdentifier("heart" + i, "drawable", getPackageName());
             Drawable drawable = getResources().getDrawable(id);
             anim.addFrame(drawable, ANIMATION_INTERVAL);
         }
         anim.setOneShot(false);
-        imageView.setImageDrawable(anim);
+        imageView.setImageDrawable(anim);//这一步会 d.setCallback(this);，设置callback是 imageview。
         anim.start();
     }
 
